@@ -33,9 +33,9 @@ export default function AboutPage() {
           <div className="space-y-6">
             <div className="bg-cream p-8">
               <h3 className="font-serif text-green-900 text-2xl mb-2">Gavin Mohrmann</h3>
-              <p className="text-orange-brand text-sm tracking-widest uppercase mb-4">Founder & Lead Designer</p>
+              <p className="text-orange-brand text-sm tracking-widest uppercase mb-4">Founder</p>
               <p className="text-stone-600 leading-relaxed text-sm">
-                Veteran. Landscape designer. Orange County local. Gavin brings military precision and genuine care to every project — from the first site walk to the final walkthrough.
+                Veteran. Orange County local. Gavin brings military precision and genuine care to every project — from the first site walk to the final walkthrough.
               </p>
               <div className="mt-6 pt-6 border-t border-stone-200 space-y-2">
                 <a href="tel:9493716356" className="flex items-center gap-3 text-stone-600 text-sm hover:text-green-900 transition-colors">
