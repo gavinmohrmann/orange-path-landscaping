@@ -18,6 +18,7 @@ export default function Nav() {
     { href: '/work', label: 'Our Work' },
     { href: '/services', label: 'Services' },
     { href: '/packages', label: 'Packages' },
+    { href: '/blog', label: 'Field Notes' },
     { href: '/about', label: 'About' },
     { href: '/contact', label: 'Contact' },
   ]
