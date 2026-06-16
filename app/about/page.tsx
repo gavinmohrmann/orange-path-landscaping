@@ -28,9 +28,6 @@ export default function AboutPage() {
               <p>
                 We specialize in the full arc: from initial design conversations to photorealistic 3D renders, through construction, and into ongoing care. We believe a landscape should be something you want to live in, not just look at.
               </p>
-              <p>
-                In our first six months we&apos;ve completed nine projects across Orange County, working with homeowners who wanted something better than the standard bid-and-bolt landscaping experience.
-              </p>
             </div>
           </div>
           <div className="space-y-6">
