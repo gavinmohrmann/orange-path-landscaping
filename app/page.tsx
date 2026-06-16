@@ -58,11 +58,11 @@ export default function Home() {
         <div className="relative z-10 max-w-7xl mx-auto px-6 pb-20 md:pb-28 w-full">
           <p className="section-label text-orange-light mb-4">Orange County, CA</p>
           <h1 className="font-serif text-white text-5xl md:text-7xl lg:text-8xl font-normal leading-tight max-w-3xl mb-6">
-            Landscapes<br />
-            <em>Worth Living In</em>
+            Landscapes that<br />
+            <em>Capture the Imagination</em>
           </h1>
           <p className="text-white/70 text-lg max-w-md mb-10 font-light leading-relaxed">
-            Design, construction, and care for discerning homeowners across Orange County.
+            Design, Construction and Property Care.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link href="/work" className="btn-outline">View Our Work</Link>
