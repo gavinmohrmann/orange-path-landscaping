@@ -10,9 +10,8 @@ export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false)
   const pathname = usePathname()
 
-  // Pages with dark hero images — nav starts transparent with white text
-  const darkHeroPages = ['/', '/work', '/packages', '/blog']
-  const hasDarkHero = darkHeroPages.some((p) => pathname === p || pathname.startsWith('/blog/'))
+  // Only the homepage gets the transparent dark-hero nav treatment
+  const hasDarkHero = pathname === '/'
   const useDarkText = scrolled || !hasDarkHero
 
   useEffect(() => {
