@@ -4,7 +4,7 @@ slug: "from-dead-grass-to-desert-modern-in-dana-point-how-we-did-it"
 date: "2026-06-16"
 category: "Project Story"
 excerpt: "We ripped out a dead lawn in Dana Point and built a drought-tolerant desert-modern front yard in 21 days. Here's exactly how it went."
-published: false
+published: true
 ---
 
 ---

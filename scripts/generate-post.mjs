@@ -87,7 +87,7 @@ slug: "${slug}"
 date: "${date}"
 category: "${category}"
 excerpt: "${excerpt}"
-published: false
+published: true
 ---
 
 ${body}
