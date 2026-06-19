@@ -32,21 +32,29 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Calendly CTA */}
-      <section className="bg-green-900 py-12">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div>
-            <p className="font-serif text-white text-2xl md:text-3xl">The fastest way to get started</p>
-            <p className="text-white/60 mt-1">Pick a time that works for you — 30 minutes, no pressure.</p>
+      {/* Two CTAs */}
+      <section className="bg-green-900 py-14">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <p className="font-serif text-white text-2xl md:text-3xl mb-2">Ready to get started?</p>
+          <p className="text-white/60 mb-10">Pick whichever works best for you.</p>
+          <div className="grid md:grid-cols-2 gap-6">
+            <a
+              href="https://calendly.com/gavin-orangepathlandscaping/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-orange-brand hover:bg-orange-500 text-white font-medium px-8 py-5 block transition-colors"
+            >
+              <span className="block text-lg">Book a Free Consultation</span>
+              <span className="block text-white/70 text-sm mt-1">Schedule a free 30-minute call</span>
+            </a>
+            <a
+              href="tel:9493716356"
+              className="bg-white/10 hover:bg-white/20 text-white font-medium px-8 py-5 block transition-colors border border-white/20"
+            >
+              <span className="block text-lg">Call or Text Gavin</span>
+              <span className="block text-white/70 text-sm mt-1">(949) 371-6356</span>
+            </a>
           </div>
-          <a
-            href="https://calendly.com/gavin-orangepathlandscaping/30min"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary whitespace-nowrap shrink-0"
-          >
-            Book a Free Consultation
-          </a>
         </div>
       </section>
 
