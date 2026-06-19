@@ -122,7 +122,7 @@ export default function WorkPage() {
                 <div className={`grid gap-3 ${project.images.length > 1 ? 'grid-cols-2' : 'grid-cols-1'}`}>
                   {project.images.map((img, j) => (
                     <div key={j} className={`relative overflow-hidden ${j === 0 && project.images.length > 1 ? 'aspect-[3/4]' : 'aspect-[3/4]'}`}>
-                      <Image src={img} alt={project.alts[j] ?? project.title} fill className="object-cover" />
+                      <Image src={img} alt={(project.alts ?? [])[j] ?? project.title} fill className="object-cover" />
                     </div>
                   ))}
                 </div>
