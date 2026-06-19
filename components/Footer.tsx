@@ -61,7 +61,10 @@ export default function Footer() {
         </div>
         <div className="border-t border-stone-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-stone-600 text-xs">
           <p>© {new Date().getFullYear()} Orange Path Landscaping. All rights reserved.</p>
-          <p>Orange County, California</p>
+          <div className="flex gap-4">
+            <Link href="/privacy" className="hover:text-stone-400 transition-colors">Privacy Policy</Link>
+            <span>Orange County, California</span>
+          </div>
         </div>
       </div>
     </footer>
