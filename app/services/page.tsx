@@ -1,5 +1,16 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'Landscaping Services | Orange County, CA — Orange Path Landscaping',
+  description: 'Full-service landscaping in Orange County: 3D landscape design, retaining walls, hardscapes, pergolas, native & drought-tolerant plants, property care, and irrigation audits. Free consultations. LIC #1146854.',
+  openGraph: {
+    title: 'Landscaping Services — Orange Path Landscaping | Orange County, CA',
+    description: 'Landscape design, retaining walls, hardscapes, pergolas, native plants, and property care across Orange County. Free consultations.',
+    url: 'https://orangepathlandscaping.com/services',
+  },
+}
 
 const services = [
   {

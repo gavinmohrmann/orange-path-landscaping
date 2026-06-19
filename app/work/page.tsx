@@ -1,5 +1,16 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'Portfolio | Landscape Projects — Orange Path Landscaping, Orange County CA',
+  description: 'Browse completed landscape projects by Orange Path Landscaping across Orange County — paver patios, retaining walls, xeriscape front yards, decks, and custom outdoor living spaces.',
+  openGraph: {
+    title: 'Landscape Portfolio — Orange Path Landscaping | Orange County, CA',
+    description: 'Completed projects: paver patios, retaining walls, xeriscape, decks, and outdoor living spaces across Orange County.',
+    url: 'https://orangepathlandscaping.com/work',
+  },
+}
 
 const projects = [
   {
@@ -9,6 +20,7 @@ const projects = [
     category: 'Landscape Design & Hardscape',
     description: 'A complete front yard transformation featuring a paver driveway approach, custom mailbox columns with pyramid toppers, a circle softbed in the center of the turf, and native flowering plants anchored by a statement purple-leafed tree.',
     images: ['/images/projects/sand-point-render-day.jpg', '/images/projects/sand-point-render-night.jpg'],
+    alts: ['3D daytime render of front yard paver redesign with column toppers and circle softbed, Orange County CA', '3D nighttime render of front yard paver redesign with landscape lighting, Orange County CA'],
     featured: true,
   },
   {
@@ -18,6 +30,7 @@ const projects = [
     category: 'Xeriscape Design & Build',
     description: 'A drought-tolerant xeriscape transformation featuring bold desert specimens — saguaro cactus, agave, golden barrel cactus, and flagstone stepping pathways lit by warm garden lights.',
     images: ['/images/projects/monica-render-1.jpg', '/images/projects/monica-render-2.jpg'],
+    alts: ['3D xeriscape design render with saguaro cactus and agave, Orange County CA', 'Xeriscape front yard design with flagstone pathways and desert plants, Orange County CA'],
     featured: true,
   },
   {
@@ -27,6 +40,7 @@ const projects = [
     category: 'Design Concept — California Room',
     description: 'A full outdoor living transformation centered around a California Room with outdoor kitchen, built-in grill, wine fridge, fireplace lounge, and resort-style pool patio. Designed with photorealistic 3D renders so the client could see the vision before breaking ground.',
     images: ['/images/projects/dream-backyard-render-1.jpg', '/images/projects/dream-backyard-render-2.jpg'],
+    alts: ['3D render of California Room outdoor kitchen with fireplace and pool patio, Orange County CA', 'Photorealistic backyard design render with outdoor living space and pool, Orange County CA'],
     featured: true,
   },
   {
@@ -36,6 +50,7 @@ const projects = [
     category: 'Commercial Design',
     description: 'Full landscape design for a commercial marketplace courtyard — shade trees, agave and pink muhly planting beds, decorative boulders, a central pergola, and paver hardscape to create a gathering destination.',
     images: ['/images/projects/riverstreet-render-1.jpg', '/images/projects/riverstreet-render-2.jpg'],
+    alts: ['Commercial courtyard landscape design with pergola and paver hardscape, Orange County CA', 'Marketplace courtyard design with shade trees and agave planting beds, Orange County CA'],
     featured: false,
   },
   {
@@ -45,6 +60,7 @@ const projects = [
     category: 'Completed Build — Hardscape',
     description: '200 sq ft backyard paver patio installation. Clean herringbone layout with tight joints, proper base compaction, and seamless transition from the existing structure.',
     images: ['/images/projects/paver-patio.jpg'],
+    alts: ['Completed 200 sq ft herringbone paver patio installation, Orange County CA'],
     featured: false,
   },
   {
@@ -54,6 +70,7 @@ const projects = [
     category: 'Completed Build — Planting',
     description: 'Tropical planting installation featuring sago palms, colorful cordylines, and lush ground cover set in lava rock mulch — plus a cedar fence planting bed with fresh plantings along a patio.',
     images: ['/images/projects/native-plants-1.jpg', '/images/projects/native-plants-2.jpg'],
+    alts: ['Tropical planting installation with sago palms and cordylines in lava rock mulch, Orange County CA', 'Cedar fence planting bed with colorful tropical plants, Orange County CA'],
     featured: false,
   },
   {
@@ -105,7 +122,7 @@ export default function WorkPage() {
                 <div className={`grid gap-3 ${project.images.length > 1 ? 'grid-cols-2' : 'grid-cols-1'}`}>
                   {project.images.map((img, j) => (
                     <div key={j} className={`relative overflow-hidden ${j === 0 && project.images.length > 1 ? 'aspect-[3/4]' : 'aspect-[3/4]'}`}>
-                      <Image src={img} alt={project.title} fill className="object-cover" />
+                      <Image src={img} alt={project.alts[j] ?? project.title} fill className="object-cover" />
                     </div>
                   ))}
                 </div>
@@ -130,7 +147,7 @@ export default function WorkPage() {
               <div key={project.id} className="bg-white">
                 {project.images.length > 0 ? (
                   <div className="relative aspect-[4/3] overflow-hidden project-card">
-                    <Image src={project.images[0]} alt={project.title} fill className="object-cover" />
+                    <Image src={project.images[0]} alt={project.alts[0] ?? project.title} fill className="object-cover" />
                     <div className="project-overlay absolute inset-0 bg-green-950/60 flex items-end p-5">
                       <p className="text-white font-serif text-lg">{project.title}</p>
                     </div>

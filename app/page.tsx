@@ -1,5 +1,16 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'Orange Path Landscaping | Landscape Design, Hardscapes & Property Care — Orange County, CA',
+  description: 'Orange County\'s landscape design and construction company. 3D design renders, hardscapes, retaining walls, pergolas, native plants, and property care. Veteran-owned. LIC #1146854. Free consultations.',
+  openGraph: {
+    title: 'Orange Path Landscaping | Orange County, CA',
+    description: 'Landscape design, hardscapes, retaining walls, pergolas, and property care. Veteran-owned. Free consultations.',
+    url: 'https://orangepathlandscaping.com',
+  },
+}
 
 const featuredProjects = [
   {
@@ -7,36 +18,42 @@ const featuredProjects = [
     subtitle: 'San Juan Capistrano, CA — Church Courtyard Labyrinth',
     tag: 'Completed Build',
     image: '/images/projects/hardscape-after.png',
+    alt: 'Completed hardscape and labyrinth courtyard at Del Obispo St, San Juan Capistrano CA',
   },
   {
     title: 'Keystone Retaining Wall',
     subtitle: 'Curved Wall Installation',
     tag: 'Completed Build',
     image: '/images/projects/retaining-wall-curved.png',
+    alt: 'Curved keystone retaining wall installation by Orange Path Landscaping, Orange County CA',
   },
   {
     title: 'Trex Stage & Deck',
     subtitle: '18x14 Freestanding Platform',
     tag: 'Completed Build',
     image: '/images/projects/deck-stage.jpg',
+    alt: '18x14 freestanding Trex deck and stage platform built by Orange Path Landscaping',
   },
   {
     title: 'Backyard Oasis',
     subtitle: 'Pool Patio & Outdoor Living',
     tag: 'Design Concept',
     image: '/images/projects/wix-render1.png',
+    alt: '3D landscape design render of backyard pool patio and outdoor living space, Orange County CA',
   },
   {
     title: 'Front Yard Redesign with Pavers',
     subtitle: 'Pyramid Column Toppers & Circle Softbed',
     tag: 'Design Concept',
     image: '/images/projects/sand-point-best.jpg',
+    alt: 'Front yard paver redesign with pyramid column toppers and circle softbed, Orange County CA',
   },
   {
     title: 'Outdoor Kitchen & Fireplace',
     subtitle: 'Entertainer\'s Backyard',
     tag: 'Design Concept',
     image: '/images/projects/wix-render2.png',
+    alt: '3D design render of outdoor kitchen and fireplace entertaining backyard, Orange County CA',
   },
 ]
 
@@ -47,7 +64,7 @@ export default function Home() {
       <section className="relative h-screen min-h-[700px] flex items-end">
         <Image
           src="/images/hero-real.jpg"
-          alt="Beautiful landscape design by Orange Path Landscaping"
+          alt="Landscape design and hardscape by Orange Path Landscaping, Orange County CA"
           fill
           className="object-cover object-[center_60%]"
           priority
@@ -109,7 +126,7 @@ export default function Home() {
               <Link key={project.title} href="/work" className="project-card group relative overflow-hidden block aspect-[4/5]">
                 <Image
                   src={project.image}
-                  alt={project.title}
+                  alt={project.alt}
                   fill
                   className="object-cover"
                 />
@@ -158,7 +175,7 @@ export default function Home() {
       <section className="relative py-28 md:py-40 overflow-hidden">
         <Image
           src="/images/projects/monica-2.jpg"
-          alt="Landscape project"
+          alt="Completed xeriscape landscape project in Orange County CA by Orange Path Landscaping"
           fill
           className="object-cover"
         />

@@ -1,5 +1,16 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'About | Veteran-Owned Landscaping — Orange Path Landscaping, Orange County CA',
+  description: 'Orange Path Landscaping is a veteran-owned landscape design and construction company based in Orange County, CA. Founded by Gavin Mohrmann. Licensed contractor #1146854.',
+  openGraph: {
+    title: 'About Orange Path Landscaping — Veteran-Owned, Orange County CA',
+    description: 'Veteran-owned landscape design and construction company in Orange County. Founded by Gavin Mohrmann. LIC #1146854.',
+    url: 'https://orangepathlandscaping.com/about',
+  },
+}
 
 export default function AboutPage() {
   return (
