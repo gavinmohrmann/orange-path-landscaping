@@ -147,7 +147,7 @@ export default function WorkPage() {
               <div key={project.id} className="bg-white">
                 {project.images.length > 0 ? (
                   <div className="relative aspect-[4/3] overflow-hidden project-card">
-                    <Image src={project.images[0]} alt={project.alts[0] ?? project.title} fill className="object-cover" />
+                    <Image src={project.images[0]} alt={project.alts?.[0] ?? project.title} fill className="object-cover" />
                     <div className="project-overlay absolute inset-0 bg-green-950/60 flex items-end p-5">
                       <p className="text-white font-serif text-lg">{project.title}</p>
                     </div>
