@@ -42,12 +42,16 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="space-y-6">
-            <div className="relative w-48 h-48 overflow-hidden rounded-sm">
-              <Image src="/images/gavin-headshot.jpg" alt="Gavin Mohrmann" fill className="object-cover object-top" />
-            </div>
             <div className="bg-cream p-8">
-              <h3 className="font-serif text-green-900 text-2xl mb-2">Gavin Mohrmann</h3>
-              <p className="text-orange-brand text-sm tracking-widest uppercase mb-4">Founder</p>
+              <div className="flex items-center gap-5 mb-6">
+                <div className="relative w-20 h-20 overflow-hidden rounded-sm flex-shrink-0">
+                  <Image src="/images/gavin-headshot.jpg" alt="Gavin Mohrmann" fill className="object-cover object-top" />
+                </div>
+                <div>
+                  <h3 className="font-serif text-green-900 text-2xl mb-1">Gavin Mohrmann</h3>
+                  <p className="text-orange-brand text-sm tracking-widest uppercase">Founder</p>
+                </div>
+              </div>
               <p className="text-stone-600 leading-relaxed text-sm">
                 Veteran. Orange County local. Gavin brings military precision and genuine care to every project — from the first site walk to the final walkthrough.
               </p>
