@@ -285,17 +285,14 @@ export default function PackagesPage() {
           <p className="text-stone-500 max-w-xl leading-relaxed mb-2">
             Ongoing care to keep your landscape looking its best — handled by the same team that knows your property.
           </p>
-          <p className="text-xs text-stone-400 tracking-wide uppercase mb-14">
-            ⚠ Applies to properties under 8,000 sq ft. Contact us for larger properties.
-          </p>
-          <div className="grid md:grid-cols-2 gap-6 max-w-3xl">
+          <div className="grid md:grid-cols-2 gap-6 max-w-3xl mb-8">
             <div className="bg-white p-8 border border-stone-100">
               <p className="section-label mb-3">Basic</p>
               <div className="flex items-baseline gap-2 mb-1">
                 <span className="font-serif text-green-900 text-4xl">$95</span>
                 <span className="text-stone-400 text-sm">/ month</span>
               </div>
-              <p className="text-stone-400 text-xs tracking-wide uppercase mb-6">1 visit per month</p>
+              <p className="text-stone-400 text-xs tracking-wide uppercase mb-6">Front yard only · 2 visits per month</p>
               <ul className="space-y-3">
                 {['Mowing', 'Edging', 'Pruning as needed'].map((item) => (
                   <li key={item} className="flex items-center gap-3 text-sm text-stone-600">
@@ -316,10 +313,10 @@ export default function PackagesPage() {
             <div className="bg-green-900 p-8">
               <p className="text-xs tracking-widest uppercase text-orange-light mb-3">Standard</p>
               <div className="flex items-baseline gap-2 mb-1">
-                <span className="font-serif text-white text-4xl">$145</span>
+                <span className="font-serif text-white text-4xl">$150</span>
                 <span className="text-white/50 text-sm">/ month</span>
               </div>
-              <p className="text-white/40 text-xs tracking-wide uppercase mb-6">Up to 2 visits per month</p>
+              <p className="text-white/40 text-xs tracking-wide uppercase mb-6">Weekly visits</p>
               <ul className="space-y-3">
                 {['Mowing', 'Edging', 'Pruning as needed'].map((item) => (
                   <li key={item} className="flex items-center gap-3 text-sm text-white/80">
@@ -337,6 +334,9 @@ export default function PackagesPage() {
               </a>
             </div>
           </div>
+          <p className="text-xs text-stone-400 max-w-xl leading-relaxed">
+            * Pricing is based on standard residential properties. Surcharges may apply based on overall property size and slope.
+          </p>
         </div>
       </section>
 
