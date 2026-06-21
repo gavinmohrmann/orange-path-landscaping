@@ -21,6 +21,8 @@ Budget: $22,000 all-in. Realistic for what they want.
 
 This post is a look inside how we're approaching the design — the decisions, the plant list, the material choices, and why.
 
+![3D render of the Dana Point desertscape design at night](/images/projects/dana-point-desertscape-render.jpg)
+
 ---
 
 ## What We're Pulling Out

@@ -20,6 +20,10 @@ export default function PostPage({ params }: { params: { slug: string } }) {
       return `<p class="text-stone-500 italic leading-relaxed mb-4">${line.slice(1, -1)}</p>`
     }
     if (line.trim() === '') return '<br />'
+    if (line.startsWith('![')) {
+      const m = line.match(/^!\[([^\]]*)\]\(([^)]+)\)$/)
+      if (m) return `<img src="${m[2]}" alt="${m[1]}" class="w-full rounded-sm my-8 object-cover" />`
+    }
     return `<p class="text-stone-600 leading-relaxed mb-4">${line.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-green-900 underline underline-offset-2 hover:text-orange-brand transition-colors">$1</a>')}</p>`
   }).join('\n')
 
