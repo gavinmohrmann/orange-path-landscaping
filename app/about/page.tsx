@@ -42,7 +42,7 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="space-y-6">
-            <div className="relative aspect-[4/5] overflow-hidden">
+            <div className="relative w-48 h-48 overflow-hidden rounded-sm">
               <Image src="/images/gavin-headshot.jpg" alt="Gavin Mohrmann" fill className="object-cover object-top" />
             </div>
             <div className="bg-cream p-8">
