@@ -44,8 +44,8 @@ export default function AboutPage() {
           <div className="space-y-6">
             <div className="bg-cream p-8">
               <div className="flex items-center gap-5 mb-6">
-                <div className="relative w-20 h-24 overflow-hidden rounded-sm flex-shrink-0">
-                  <Image src="/images/gavin-headshot.jpg" alt="Gavin Mohrmann" fill className="object-cover object-[center_15%]" />
+                <div className="relative w-32 h-40 overflow-hidden rounded-sm flex-shrink-0">
+                  <Image src="/images/gavin-headshot.jpg" alt="Gavin Mohrmann" fill className="object-cover object-[center_10%]" />
                 </div>
                 <div>
                   <h3 className="font-serif text-green-900 text-2xl mb-1">Gavin Mohrmann</h3>
