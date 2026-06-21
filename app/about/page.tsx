@@ -42,6 +42,9 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="space-y-6">
+            <div className="relative aspect-[4/5] overflow-hidden">
+              <Image src="/images/gavin-headshot.jpg" alt="Gavin Mohrmann" fill className="object-cover object-top" />
+            </div>
             <div className="bg-cream p-8">
               <h3 className="font-serif text-green-900 text-2xl mb-2">Gavin Mohrmann</h3>
               <p className="text-orange-brand text-sm tracking-widest uppercase mb-4">Founder</p>
