@@ -58,9 +58,9 @@ const projects = [
     title: 'Paver Patio Installation',
     location: 'Orange County, CA',
     category: 'Completed Build — Hardscape',
-    description: '200 sq ft backyard paver patio installation. Clean herringbone layout with tight joints, proper base compaction, and seamless transition from the existing structure.',
+    description: '200 sq ft backyard paver patio installation. Random pattern layout with tight joints, proper base compaction, and seamless transition from the existing structure.',
     images: ['/images/projects/paver-patio.jpg'],
-    alts: ['Completed 200 sq ft herringbone paver patio installation, Orange County CA'],
+    alts: ['Completed 200 sq ft random pattern paver patio installation, Orange County CA'],
     featured: false,
   },
   {
