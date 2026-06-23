@@ -61,15 +61,7 @@ export default function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="relative h-screen min-h-[700px] flex items-end">
-        <Image
-          src="/images/hero-real.jpg"
-          alt="Landscape design and hardscape by Orange Path Landscaping, Orange County CA"
-          fill
-          className="object-cover object-[center_60%]"
-          priority
-          quality={90}
-        />
+      <section className="relative h-screen min-h-[700px] flex items-end bg-green-900">
         <div className="hero-overlay absolute inset-0" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 pb-20 md:pb-28 w-full">
