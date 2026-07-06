@@ -5,24 +5,27 @@ import path from 'path'
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
 
 const topics = [
-  'Why I always choose natural stone over manufactured pavers — and what it does to the feel of a space',
-  'The native plants I reach for most on Orange County jobs and why they outperform everything else',
-  'How a flagstone path through a drought-tolerant garden changed the way a family uses their backyard',
+  // Materials & hardscape
+  'Why I almost never use concrete as a finish surface — and what I use instead',
   'What "whimsical" actually means in landscape design — and how I achieve it without it looking chaotic',
-  'The forgotten art of layering: how to plant a garden that looks intentional but feels wild',
-  'Why I love decomposed granite as a base material — and how to use it without it looking cheap',
-  'A Laguna Niguel front yard: how we used California natives to create something that looks like it was always there',
   'The case for imperfection: why natural materials age better than anything manufactured',
-  'How boulders, gravel, and ornamental grasses can replace a lawn and look more alive',
   'What I look for in a high-end finish: texture, shadow, and how materials meet each other',
-  'A client wanted a lush tropical garden in a drought zone — here is how we made it work with natives',
-  'Why the best landscapes in Orange County borrow from the surrounding hills, not from a catalog',
-  'How I use water features — small, natural, quiet — to add life to a garden without overwhelming it',
-  'The plants I refuse to use and why: a landscape contractor\'s honest list',
-  'How to design a garden that looks stunning in June and still has structure in December',
+  'Why I love decomposed granite as a base material — and how to use it without it looking cheap',
+  'Natural wood, steel, and stone: how I combine raw materials for a finish that feels timeless',
+  'How boulders actually work in a landscape — placement, burial depth, and why most people get it wrong',
+  'The difference between a paver job that holds and one that fails in five years',
+  // Design thinking
   'Why I start every design with the view from inside the house, not from the street',
   'The difference between a garden that photographs well and one that actually feels good to be in',
-  'Natural wood, steel, and stone: how I combine raw materials for a finish that feels timeless',
+  'How I use water features — small, natural, quiet — to add life to a garden without overwhelming it',
+  'Why the best landscapes in Orange County borrow from the surrounding hills, not from a catalog',
+  'How to design a garden that looks stunning in June and still has structure in December',
+  'Why outdoor lighting is the most underused tool in residential landscaping',
+  'The first question I ask every client — and why the answer changes everything about the design',
+  // Plants
+  'The plants I refuse to use and why: a landscape contractor\'s honest list',
+  'How to design a garden that looks intentional but feels wild',
+  'Why I almost always recommend against a lawn — and what I say when clients push back',
 ]
 
 function pickTopic(existing) {
