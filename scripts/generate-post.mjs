@@ -38,6 +38,22 @@ function slugify(title) {
   return title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '').slice(0, 60)
 }
 
+// Returns a unique slug that doesn't collide with existing post files
+function uniqueSlug(baseSlug, postsDir) {
+  let slug = baseSlug
+  let n = 2
+  while (fs.existsSync(path.join(postsDir, `${slug}.md`))) {
+    slug = `${baseSlug.slice(0, 57)}-${n}`
+    n++
+  }
+  return slug
+}
+
+// Strip any frontmatter block the model may have wrapped the body in
+function stripFrontmatter(text) {
+  return text.replace(/^---[\s\S]*?---\n?/, '').trim()
+}
+
 async function main() {
   const postsDir = path.join(process.cwd(), 'content/posts')
   const existing = fs.existsSync(postsDir) ? fs.readdirSync(postsDir) : []
@@ -63,7 +79,7 @@ Write a blog post for my website on this topic: "${topic}"
 
 Use specific details, sensory descriptions, and genuine opinions. The tone should feel warm, intelligent, and grounded — like you're sharing hard-won knowledge with a homeowner over coffee who has good taste and wants to understand why things are done a certain way.
 
-Return ONLY the post in this exact format — nothing else before or after:
+Return ONLY the post in this exact format — nothing else before or after. Do NOT wrap the output in frontmatter or markdown code fences:
 
 TITLE: [the post title]
 CATEGORY: [one of: How-To, Design Philosophy]
@@ -75,23 +91,57 @@ EXCERPT: [one sentence summary, under 160 characters]
   })
 
   const text = response.content[0].text
+
+  // Take only the FIRST match of each header to avoid the regex matching
+  // a stale example that the model may have echoed inside the body
   const titleMatch = text.match(/^TITLE: (.+)$/m)
   const categoryMatch = text.match(/^CATEGORY: (.+)$/m)
   const excerptMatch = text.match(/^EXCERPT: (.+)$/m)
   const bodyMatch = text.match(/^EXCERPT: .+\n\n([\s\S]+)$/m)
 
   if (!titleMatch || !categoryMatch || !excerptMatch || !bodyMatch) {
-    console.error('Unexpected response format:', text.slice(0, 200))
+    console.error('ERROR: Unexpected response format from model:')
+    console.error(text.slice(0, 400))
     process.exit(1)
   }
 
   const title = titleMatch[1].trim()
   const category = categoryMatch[1].trim()
   const excerpt = excerptMatch[1].trim()
-  const body = bodyMatch[1].trim()
-  const slug = slugify(title)
+  // Strip any frontmatter the model snuck into the body
+  const body = stripFrontmatter(bodyMatch[1].trim())
+
+  // Always derive slug and date fresh — never from model output
+  const baseSlug = slugify(title)
   const date = new Date().toISOString().split('T')[0]
+
+  fs.mkdirSync(postsDir, { recursive: true })
+
+  // Bug 2: collision guard
+  const slug = uniqueSlug(baseSlug, postsDir)
   const filename = `${slug}.md`
+
+  // Validation step: catch obviously bad output before writing
+  if (!title || title.length < 5) {
+    console.error(`ERROR: title looks wrong: "${title}"`)
+    process.exit(1)
+  }
+  if (!['How-To', 'Design Philosophy'].includes(category)) {
+    console.error(`ERROR: unexpected category: "${category}"`)
+    process.exit(1)
+  }
+  if (!excerpt || excerpt.length > 200) {
+    console.error(`ERROR: excerpt missing or too long: "${excerpt}"`)
+    process.exit(1)
+  }
+  if (body.length < 200) {
+    console.error(`ERROR: body suspiciously short (${body.length} chars)`)
+    process.exit(1)
+  }
+  if (fs.existsSync(path.join(postsDir, filename))) {
+    console.error(`ERROR: slug collision even after uniqueness guard — ${filename} already exists`)
+    process.exit(1)
+  }
 
   const frontmatter = `---
 title: "${title}"
@@ -99,19 +149,28 @@ slug: "${slug}"
 date: "${date}"
 category: "${category}"
 excerpt: "${excerpt}"
-published: true
+published: false
 ---
 
 ${body}
 `
 
-  fs.mkdirSync(postsDir, { recursive: true })
   fs.writeFileSync(path.join(postsDir, filename), frontmatter)
   console.log(`Draft saved: content/posts/${filename}`)
+  console.log(`Title: ${title}`)
+  console.log(`Slug: ${slug}`)
+  console.log(`Date: ${date}`)
 
-  // Output for GitHub Actions to pick up
-  console.log(`::set-output name=filename::${filename}`)
-  console.log(`::set-output name=title::${title}`)
+  // GitHub Actions output (modern syntax)
+  const githubOutput = process.env.GITHUB_OUTPUT
+  if (githubOutput) {
+    fs.appendFileSync(githubOutput, `filename=${filename}\n`)
+    fs.appendFileSync(githubOutput, `title=${title}\n`)
+  } else {
+    // Fallback for local runs
+    console.log(`::set-output name=filename::${filename}`)
+    console.log(`::set-output name=title::${title}`)
+  }
 }
 
 main().catch((e) => { console.error(e); process.exit(1) })
