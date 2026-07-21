@@ -15,7 +15,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
 
       - name: Install dependencies
         run: npm ci
@@ -29,8 +29,25 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: node scripts/generate-post.mjs
 
+      - name: Validate generated post
+        run: |
+          FILE=$(ls content/posts/*.md | sort | tail -1)
+          echo "Validating $FILE"
+          # Must have all required frontmatter fields
+          grep -q '^title:' "$FILE"    || (echo "ERROR: missing title"    && exit 1)
+          grep -q '^slug:' "$FILE"     || (echo "ERROR: missing slug"     && exit 1)
+          grep -q '^date:' "$FILE"     || (echo "ERROR: missing date"     && exit 1)
+          grep -q '^category:' "$FILE" || (echo "ERROR: missing category" && exit 1)
+          grep -q '^excerpt:' "$FILE"  || (echo "ERROR: missing excerpt"  && exit 1)
+          # Must be unpublished
+          grep -q '^published: false'  "$FILE" || (echo "ERROR: post must have published: false" && exit 1)
+          # Body must have some content (more than just frontmatter)
+          LINES=$(wc -l < "$FILE")
+          [ "$LINES" -gt 15 ] || (echo "ERROR: file suspiciously short ($LINES lines)" && exit 1)
+          echo "Validation passed."
+
       - name: Create pull request
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.GH_TOKEN }}
           commit-message: "Add draft blog post"
