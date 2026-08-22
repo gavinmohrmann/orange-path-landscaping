@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
+import Lightbox from '@/components/Lightbox'
 
 export const metadata: Metadata = {
   title: 'Portfolio | Landscape Projects — Orange Path Landscaping, Orange County CA',
@@ -13,6 +13,16 @@ export const metadata: Metadata = {
 }
 
 const projects = [
+  {
+    id: 13,
+    title: 'River Street Marketplace',
+    location: 'San Juan Capistrano, CA',
+    category: 'Completed Build — Commercial Planting',
+    description: 'Planting restoration across an open-air retail marketplace, working to the landscape architect\'s replacement plan. Over 100 California natives and drought-tolerant specimens installed around specimen sycamores, with drip irrigation retrofit and post-and-rope barriers set to protect new plantings from foot traffic — the reason the previous round failed. Installed on a working property, around open shops and outdoor dining, without closing the walkways.',
+    images: ['/images/projects/riverstreet-built-1.jpg', '/images/projects/riverstreet-built-2.jpg'],
+    alts: ['Completed commercial planting beds with post-and-rope barriers at River Street Marketplace, San Juan Capistrano CA', 'Native and drought-tolerant planting around specimen sycamore in retail courtyard, San Juan Capistrano CA'],
+    featured: true,
+  },
   {
     id: 11,
     title: 'Church Courtyard Labyrinth',
@@ -84,6 +94,16 @@ const projects = [
     featured: false,
   },
   {
+    id: 14,
+    title: 'Commercial Bed Protection',
+    location: 'San Juan Capistrano, CA',
+    category: 'Completed Build — Detail',
+    description: 'Post-and-rope barriers set around new planting beds at a retail marketplace. The previous planting failed to trampling, so the barrier is not decoration — it is the reason this round survives. Posts set in concrete, rope tensioned and whipped at the ends, drip lines run beneath.',
+    images: ['/images/projects/riverstreet-built-3.jpg', '/images/projects/riverstreet-built-4.jpg'],
+    alts: ['Post-and-rope barrier detail protecting new commercial planting bed, San Juan Capistrano CA', 'Planting bed with protective rope barrier alongside turf and outdoor dining, San Juan Capistrano CA'],
+    featured: false,
+  },
+  {
     id: 12,
     title: 'Labyrinth Centerpiece — Paver Detail',
     location: 'San Juan Capistrano, CA',
@@ -151,8 +171,8 @@ export default function WorkPage() {
               <div key={project.id} className={`grid md:grid-cols-2 gap-8 items-center ${i % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
                 <div className={`grid gap-3 ${project.images.length > 1 ? 'grid-cols-2' : 'grid-cols-1'}`}>
                   {project.images.map((img, j) => (
-                    <div key={j} className={`relative overflow-hidden ${j === 0 && project.images.length > 1 ? 'aspect-[3/4]' : 'aspect-[3/4]'}`}>
-                      <Image src={img} alt={(project.alts ?? [])[j] ?? project.title} fill className="object-cover" />
+                    <div key={j} className="relative overflow-hidden aspect-[3/4]">
+                      <Lightbox src={img} alt={(project.alts ?? [])[j] ?? project.title} sizes="(max-width: 768px) 50vw, 25vw" />
                     </div>
                   ))}
                 </div>
@@ -177,7 +197,7 @@ export default function WorkPage() {
               <div key={project.id} className="bg-white">
                 {project.images.length > 0 ? (
                   <div className="relative aspect-[4/3] overflow-hidden project-card">
-                    <Image src={project.images[0]} alt={project.alts?.[0] ?? project.title} fill className="object-cover" />
+                    <Lightbox src={project.images[0]} alt={project.alts?.[0] ?? project.title} sizes="(max-width: 768px) 100vw, 33vw" />
                     <div className="project-overlay absolute inset-0 bg-green-950/60 flex items-end p-5">
                       <p className="text-white font-serif text-lg">{project.title}</p>
                     </div>

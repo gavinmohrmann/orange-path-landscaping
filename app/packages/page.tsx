@@ -111,21 +111,21 @@ const faqs = [
 const constructionServices = [
   {
     name: 'Artificial Turf',
-    rate: '$7.98',
+    rate: '$9.00',
     unit: 'per sq ft',
     description: 'Professional installation of artificial turf including base prep, compaction, and infill. No mowing, no watering — just a clean lawn year-round.',
     notes: 'Material cost included in rate.',
   },
   {
     name: 'Sod Installation',
-    rate: '$6.98',
+    rate: '$7.00',
     unit: 'per sq ft',
     description: 'Fresh sod installed over prepared soil — graded, rolled, and ready to take root. Best for homeowners who want a real lawn fast.',
     notes: 'Material cost included in rate.',
   },
   {
     name: 'Paver Installation',
-    rate: '$14.98',
+    rate: '$15.00',
     unit: 'per sq ft (labor)',
     description: 'Full paver installation including excavation, compacted gravel base, sand bed, laying, and joint sand. Driveways, patios, walkways, and pool decks.',
     notes: 'Paver material cost is additional and varies by product selection.',
@@ -141,8 +141,15 @@ const constructionServices = [
     name: 'Concrete — Top Cast',
     rate: '$15.00',
     unit: 'per sq ft',
-    description: 'Exposed aggregate or top-cast finish concrete for a more refined, textured look. Popular for patios and front entries.',
+    description: 'A surface retarder is applied to the fresh pour and washed off to expose the aggregate already in the concrete mix. Textured and refined, at a cost-effective price point. Popular for patios and front entries.',
     notes: 'Material and labor included.',
+  },
+  {
+    name: 'Concrete — Seeded Exposed Aggregate',
+    rate: '$25.00',
+    unit: 'per sq ft',
+    description: 'Decorative stone is broadcast onto the fresh surface, pressed in, and exposure-washed to reveal it — so you choose the stone and control the color and texture. Includes demolition and haul-off, compacted base, steel reinforcement, and a two-coat penetrating sealer. A specialty finish few crews still do well.',
+    notes: 'Minimum project size applies. Small areas price higher per sq ft.',
   },
 ]
 
@@ -313,7 +320,7 @@ export default function PackagesPage() {
             <div className="bg-green-900 p-8">
               <p className="text-xs tracking-widest uppercase text-orange-light mb-3">Standard</p>
               <div className="flex items-baseline gap-2 mb-1">
-                <span className="font-serif text-white text-4xl">$150</span>
+                <span className="font-serif text-white text-4xl">$250</span>
                 <span className="text-white/50 text-sm">/ month</span>
               </div>
               <p className="text-white/40 text-xs tracking-wide uppercase mb-6">Weekly visits</p>
