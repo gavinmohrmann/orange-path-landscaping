@@ -292,40 +292,16 @@ export default function PackagesPage() {
           <p className="text-stone-500 max-w-xl leading-relaxed mb-2">
             Ongoing care to keep your landscape looking its best — handled by the same team that knows your property.
           </p>
-          <div className="grid md:grid-cols-2 gap-6 max-w-3xl mb-8">
-            <div className="bg-white p-8 border border-stone-100">
-              <p className="section-label mb-3">Basic</p>
-              <div className="flex items-baseline gap-2 mb-1">
-                <span className="font-serif text-green-900 text-4xl">$95</span>
-                <span className="text-stone-400 text-sm">/ month</span>
-              </div>
-              <p className="text-stone-400 text-xs tracking-wide uppercase mb-6">Front yard only · 2 visits per month</p>
-              <ul className="space-y-3">
-                {['Mowing', 'Edging', 'Pruning as needed'].map((item) => (
-                  <li key={item} className="flex items-center gap-3 text-sm text-stone-600">
-                    <span className="text-green-700">✓</span> {item}
-                  </li>
-                ))}
-              </ul>
-              <a
-                href="https://calendly.com/gavin-orangepathlandscaping/30min"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-8 block text-center py-3 px-6 text-sm tracking-widest uppercase font-medium border border-green-900 text-green-900 hover:bg-green-900 hover:text-white transition-colors"
-              >
-                Get Started
-              </a>
-            </div>
-
+          <div className="max-w-md mb-8">
             <div className="bg-green-900 p-8">
-              <p className="text-xs tracking-widest uppercase text-orange-light mb-3">Standard</p>
+              <p className="text-xs tracking-widest uppercase text-orange-light mb-3">Maintenance</p>
               <div className="flex items-baseline gap-2 mb-1">
-                <span className="font-serif text-white text-4xl">$250</span>
+                <span className="font-serif text-white text-4xl">from $250</span>
                 <span className="text-white/50 text-sm">/ month</span>
               </div>
               <p className="text-white/40 text-xs tracking-wide uppercase mb-6">Weekly visits</p>
               <ul className="space-y-3">
-                {['Mowing', 'Edging', 'Pruning as needed'].map((item) => (
+                {['Mowing', 'Edging', 'Pruning as needed', 'Bed weeding', 'Debris blow-down'].map((item) => (
                   <li key={item} className="flex items-center gap-3 text-sm text-white/80">
                     <span className="text-orange-light">✓</span> {item}
                   </li>
