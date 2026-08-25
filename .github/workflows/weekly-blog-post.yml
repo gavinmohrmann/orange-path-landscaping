@@ -31,7 +31,7 @@ jobs:
 
       - name: Validate generated post
         run: |
-          FILE=$(ls content/posts/*.md | sort | tail -1)
+          FILE="content/posts/${{ steps.generate.outputs.filename }}"
           echo "Validating $FILE"
           # Must have all required frontmatter fields
           grep -q '^title:' "$FILE"    || (echo "ERROR: missing title"    && exit 1)
