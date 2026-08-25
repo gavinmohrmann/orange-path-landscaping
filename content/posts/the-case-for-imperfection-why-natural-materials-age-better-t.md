@@ -4,7 +4,7 @@ slug: "the-case-for-imperfection-why-natural-materials-age-better-t"
 date: "2026-08-25"
 category: "Design Philosophy"
 excerpt: "Concrete fades, vinyl cracks, and composite warps — but flagstone and boulders just get more beautiful. Here's why I'll always choose natural over manufactured."
-published: false
+published: true
 ---
 
 ---
