@@ -29,8 +29,12 @@ const topics = [
 ]
 
 function pickTopic(existing) {
+  // Compare slugified topic prefixes against existing filenames (which are slugs)
   const used = existing.map((f) => f.toLowerCase())
-  const available = topics.filter((t) => !used.some((u) => u.includes(t.slice(0, 20).toLowerCase())))
+  const available = topics.filter((t) => {
+    const slugPrefix = slugify(t).slice(0, 30)
+    return !used.some((u) => u.includes(slugPrefix))
+  })
   return available[Math.floor(Math.random() * available.length)] || topics[Math.floor(Math.random() * topics.length)]
 }
 
@@ -105,9 +109,10 @@ EXCERPT: [one sentence summary, under 160 characters]
     process.exit(1)
   }
 
-  const title = titleMatch[1].trim()
+  // Escape double-quotes so they don't break YAML frontmatter (values are wrapped in "...")
+  const title = titleMatch[1].trim().replace(/"/g, '\\"')
   const category = categoryMatch[1].trim()
-  const excerpt = excerptMatch[1].trim()
+  const excerpt = excerptMatch[1].trim().replace(/"/g, '\\"')
   // Strip any frontmatter the model snuck into the body
   const body = stripFrontmatter(bodyMatch[1].trim())
 
