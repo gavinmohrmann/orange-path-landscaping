@@ -74,6 +74,16 @@ const projects = [
     featured: false,
   },
   {
+    id: 15,
+    title: 'Trex Deck Build',
+    location: 'Orange County, CA',
+    category: 'Completed Build — Deck',
+    description: '18 × 14 ft floating deck in Trex composite decking. Three-step entry, clean fascia wrap, set over a compacted base. Composite holds its color and doesn\'t splinter, warp, or need sealing — it just looks good and stays that way.',
+    images: ['/images/projects/deck-stage.jpg', '/images/projects/deck-front.jpeg'],
+    alts: ['Completed 18x14 Trex composite deck with three-step entry and turf surround, Orange County CA', 'Side view of Trex deck showing clean fascia wrap and step detail, Orange County CA'],
+    featured: false,
+  },
+  {
     id: 8,
     title: 'Paver Patio Installation',
     location: 'Orange County, CA',
