@@ -26,6 +26,7 @@ const topics = [
   'The plants I refuse to use and why: a landscape contractor\'s honest list',
   'How to design a garden that looks intentional but feels wild',
   'Why I almost always recommend against a lawn — and what I say when clients push back',
+  'Fescue, St. Augustine, Bermuda: the real maintenance cost of turf grass in Southern California — and why you should think hard before installing any of it',
 ]
 
 function pickTopic(existing) {
