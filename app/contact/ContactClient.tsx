@@ -5,18 +5,34 @@ import Link from 'next/link'
 
 export default function ContactClient() {
   const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState(false)
+  const [sending, setSending] = useState(false)
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
-    // Formspree endpoint — replace YOUR_FORM_ID with actual ID from formspree.io
+    setError(false)
+    setSending(true)
     const form = e.currentTarget
     const data = new FormData(form)
-    const res = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
-      method: 'POST',
-      body: data,
-      headers: { Accept: 'application/json' },
-    })
-    if (res.ok) setSubmitted(true)
+    data.append('_subject', 'New website lead — Orange Path contact form')
+    data.append('_template', 'table')
+    data.append('_captcha', 'false')
+    try {
+      const res = await fetch('https://formsubmit.co/ajax/gavin@orangepathlandscaping.com', {
+        method: 'POST',
+        body: data,
+        headers: { Accept: 'application/json' },
+      })
+      if (res.ok) {
+        setSubmitted(true)
+      } else {
+        setError(true)
+      }
+    } catch {
+      setError(true)
+    } finally {
+      setSending(false)
+    }
   }
 
   return (
@@ -181,9 +197,14 @@ export default function ContactClient() {
                     placeholder="Describe your space, your goals, your timeline..."
                   />
                 </div>
-                <button type="submit" className="btn-primary w-full text-center">
-                  Send Message
+                <button type="submit" disabled={sending} className="btn-primary w-full text-center disabled:opacity-60">
+                  {sending ? 'Sending…' : 'Send Message'}
                 </button>
+                {error && (
+                  <p className="text-red-600 text-sm text-center">
+                    Something went wrong sending your message — please call or text Gavin directly at (949) 371-6356.
+                  </p>
+                )}
                 <p className="text-stone-400 text-xs text-center">
                   We respond within one business day.
                 </p>
