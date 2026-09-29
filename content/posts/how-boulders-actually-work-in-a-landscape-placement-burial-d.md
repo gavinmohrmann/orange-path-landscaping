@@ -4,7 +4,7 @@ slug: "how-boulders-actually-work-in-a-landscape-placement-burial-d"
 date: "2026-09-07"
 category: "Design Philosophy"
 excerpt: "Boulders aren't decoration — they're structure. Here's how to place them so they look like they belong to the earth, not dropped from a truck."
-published: true
+published: false
 ---
 
 There's a moment I've seen a hundred times. A homeowner points to a boulder sitting in their yard — round, clean, perched on top of the soil like a golf ball on a tee — and says something like, "It just doesn't look right, but I can't figure out why."

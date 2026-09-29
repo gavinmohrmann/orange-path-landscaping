@@ -4,7 +4,7 @@ slug: "why-i-almost-never-use-concrete-as-a-finish-surface-and-what"
 date: "2026-09-28"
 category: "Design Philosophy"
 excerpt: "Concrete is cheap and fast, but it ages badly and feels wrong underfoot. Here's what I reach for instead, and why it matters."
-published: true
+published: false
 ---
 
 ## The Real Problem With Concrete
