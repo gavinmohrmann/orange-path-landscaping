@@ -29,12 +29,33 @@ const topics = [
   'Fescue, St. Augustine, Bermuda: the real maintenance cost of turf grass in Southern California — and why you should think hard before installing any of it',
 ]
 
-function pickTopic(existing) {
-  // Compare slugified topic prefixes against existing filenames (which are slugs)
-  const used = existing.map((f) => f.toLowerCase())
+function pickTopic(existing, postsDir) {
+  // Read existing post titles from frontmatter for accurate deduplication
+  const existingTitles = existing.flatMap((f) => {
+    try {
+      const content = fs.readFileSync(path.join(postsDir, f), 'utf8')
+      const match = content.match(/^title:\s*"?(.+?)"?\s*$/m)
+      return match ? [match[1].toLowerCase()] : []
+    } catch { return [] }
+  })
+  const existingFilenames = existing.map((f) => f.toLowerCase())
+
+  // Extract key words from a topic for fuzzy matching against existing titles
+  function keyWords(t) {
+    return t.toLowerCase().replace(/[^a-z0-9 ]/g, ' ').split(/\s+/).filter((w) => w.length > 4)
+  }
+
   const available = topics.filter((t) => {
+    const words = keyWords(t)
+    // Skip if any existing title shares 3+ key words with this topic
+    const titleMatch = existingTitles.some((title) => {
+      const hits = words.filter((w) => title.includes(w))
+      return hits.length >= 3
+    })
+    // Also skip if slug prefix matches a filename (original check)
     const slugPrefix = slugify(t).slice(0, 30)
-    return !used.some((u) => u.includes(slugPrefix))
+    const fileMatch = existingFilenames.some((u) => u.includes(slugPrefix))
+    return !titleMatch && !fileMatch
   })
   return available[Math.floor(Math.random() * available.length)] || topics[Math.floor(Math.random() * topics.length)]
 }
@@ -62,7 +83,7 @@ function stripFrontmatter(text) {
 async function main() {
   const postsDir = path.join(process.cwd(), 'content/posts')
   const existing = fs.existsSync(postsDir) ? fs.readdirSync(postsDir) : []
-  const topic = pickTopic(existing)
+  const topic = pickTopic(existing, postsDir)
 
   console.log(`Generating post on topic: ${topic}`)
 
