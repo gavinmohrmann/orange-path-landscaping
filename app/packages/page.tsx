@@ -3,7 +3,7 @@ import Link from 'next/link'
 const packages = [
   {
     name: 'Essential',
-    price: '$995',
+    price: '$1,195',
     description: 'Everything you need to confidently plan your outdoor project — at our most accessible price.',
     scope: 'Backyard & side yards',
     highlight: false,
@@ -23,7 +23,7 @@ const packages = [
   },
   {
     name: 'Classic',
-    price: '$1,395',
+    price: '$1,595',
     description: 'A guided design experience with photorealistic renders and a dedicated project manager to bring your vision to life.',
     scope: 'Backyard & side yards',
     highlight: true,
@@ -44,7 +44,7 @@ const packages = [
   },
   {
     name: 'Signature',
-    price: '$1,995',
+    price: '$2,195',
     description: 'Our most comprehensive design experience — day-to-night renders, cost advisor, and expert guidance from start to finish.',
     scope: 'Entire backyard & side yards',
     highlight: false,
@@ -63,7 +63,7 @@ const packages = [
   },
   {
     name: 'Premium',
-    price: '$3,495',
+    price: '$3,695',
     description: 'Full-property design including exterior architecture — paint, windows, doors — with a master designer and check-in calls throughout.',
     scope: 'Entire property',
     highlight: false,
