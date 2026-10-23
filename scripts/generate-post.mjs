@@ -87,9 +87,12 @@ async function main() {
 
   console.log(`Generating post on topic: ${topic}`)
 
+  // Retry up to 3 times if the model returns a short or truncated post (this caused failed runs)
+  let text = ''
+  for (let attempt = 1; attempt <= 3; attempt++) {
   const response = await client.messages.create({
     model: 'claude-sonnet-4-6',
-    max_tokens: 2000,
+    max_tokens: 3000,
     messages: [
       {
         role: 'user',
@@ -116,7 +119,12 @@ EXCERPT: [one sentence summary, under 160 characters]
     ],
   })
 
-  const text = response.content[0].text
+  text = response.content[0].text
+  const bodyCheck = text.match(/^EXCERPT: .+\n\n([\s\S]+)$/m)
+  const bodyLen = bodyCheck ? bodyCheck[1].trim().length : 0
+  if (bodyLen >= 2500 && response.stop_reason !== 'max_tokens') break
+  console.error(`Attempt ${attempt}: post too short or cut off (${bodyLen} chars, stop_reason=${response.stop_reason}) - retrying`)
+  }
 
   // Take only the FIRST match of each header to avoid the regex matching
   // a stale example that the model may have echoed inside the body
@@ -161,7 +169,7 @@ EXCERPT: [one sentence summary, under 160 characters]
     console.error(`ERROR: excerpt missing or too long: "${excerpt}"`)
     process.exit(1)
   }
-  if (body.length < 200) {
+  if (body.length < 2500) {
     console.error(`ERROR: body suspiciously short (${body.length} chars)`)
     process.exit(1)
   }
