@@ -136,7 +136,7 @@ export default function ServicesPage() {
             {[
               { service: 'Landscape maintenance', price: 'from $250 / month' },
               { service: 'Sod installation', price: 'from $7 / sq ft' },
-              { service: 'Artificial turf', price: 'from $9 / sq ft' },
+              { service: 'Artificial turf', price: 'from $9.50 / sq ft' },
               { service: 'Paver installation', price: 'from $15 / sq ft' },
               { service: 'Exposed-aggregate concrete', price: 'from $25 / sq ft' },
             ].map((row) => (

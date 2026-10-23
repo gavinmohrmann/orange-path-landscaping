@@ -111,7 +111,7 @@ const faqs = [
 const constructionServices = [
   {
     name: 'Artificial Turf',
-    rate: '$9.00',
+    rate: '$9.50',
     unit: 'per sq ft',
     description: 'Professional installation of artificial turf including base prep, compaction, and infill. No mowing, no watering — just a clean lawn year-round.',
     notes: 'Material cost included in rate.',
