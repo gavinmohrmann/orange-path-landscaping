@@ -19,7 +19,7 @@ const projects = [
     location: 'San Juan Capistrano, CA',
     category: 'Completed Build — Commercial Planting',
     description: 'Planting restoration across an open-air retail marketplace, working to the landscape architect\'s replacement plan. Over 100 California natives and drought-tolerant specimens installed around specimen sycamores, with drip irrigation retrofit and post-and-rope barriers set to protect new plantings from foot traffic — the reason the previous round failed. Installed on a working property, around open shops and outdoor dining, without closing the walkways.',
-    images: ['/images/projects/riverstreet-built-1.jpg', '/images/projects/riverstreet-built-2.jpg'],
+    images: ['/images/projects/riverstreet-built-1-oct28.jpg', '/images/projects/riverstreet-built-2.jpg'],
     alts: ['Completed commercial planting beds with post-and-rope barriers at River Street Marketplace, San Juan Capistrano CA', 'Native and drought-tolerant planting around specimen sycamore in retail courtyard, San Juan Capistrano CA'],
     featured: true,
   },
