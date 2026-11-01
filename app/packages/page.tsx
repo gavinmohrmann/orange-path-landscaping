@@ -55,7 +55,7 @@ const packages = [
       'In-person site consultation & kick-off call',
       'Photorealistic 3D renders (day)',
       'Night render & lighting plan',
-      '2 revision rounds',
+      '1 revision round',
       'Dedicated project manager',
       'Cost advisor',
     ],
@@ -75,7 +75,7 @@ const packages = [
       'Photorealistic 3D renders (day & night)',
       'Night render & lighting plan',
       'Exterior design (paint, windows, doors)',
-      '3 revision rounds',
+      '1 revision round',
       'Master designer',
       'Dedicated project manager',
       'Check-in design calls',
@@ -100,7 +100,7 @@ const faqs = [
   },
   {
     q: 'How long does the design process take?',
-    a: 'Most designs are delivered within 2–4 weeks of the site consultation. Premium projects with multiple revision rounds may take 4–6 weeks.',
+    a: 'Most designs are delivered within 2–4 weeks of the site consultation. Premium projects may take 4–6 weeks.',
   },
   {
     q: 'Can I use the design plans with my own contractor?',
@@ -307,14 +307,12 @@ export default function PackagesPage() {
                   </li>
                 ))}
               </ul>
-              <a
-                href="https://calendly.com/gavin-orangepathlandscaping/30min"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/maintenance"
                 className="mt-8 block text-center py-3 px-6 text-sm tracking-widest uppercase font-medium bg-orange-brand text-white hover:bg-orange-light transition-colors"
               >
-                Get Started
-              </a>
+                See Maintenance Details
+              </Link>
             </div>
           </div>
           <p className="text-xs text-stone-400 max-w-xl leading-relaxed">
