@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import { reportConversion, CONV_FORM } from '@/components/GoogleTag'
 
 export default function ContactClient() {
   const [submitted, setSubmitted] = useState(false)
@@ -25,6 +26,7 @@ export default function ContactClient() {
       })
       if (res.ok) {
         setSubmitted(true)
+        reportConversion(CONV_FORM)
       } else {
         setError(true)
       }
