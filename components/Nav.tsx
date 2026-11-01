@@ -68,19 +68,19 @@ export default function Nav() {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-10">
+          <nav className="hidden md:flex items-center gap-6 lg:gap-8 whitespace-nowrap">
             {links.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={useDarkText ? 'nav-link-dark' : 'nav-link'}
+                className={`whitespace-nowrap ${useDarkText ? 'nav-link-dark' : 'nav-link'}`}
               >
                 {link.label}
               </Link>
             ))}
             <a
               href="tel:9493716356"
-              className={`text-sm font-medium tracking-wide transition-colors duration-200 ${
+              className={`text-sm font-medium tracking-wide whitespace-nowrap transition-colors duration-200 ${
                 useDarkText ? 'text-orange-brand hover:text-orange-light' : 'text-white hover:text-white/80'
               }`}
             >
