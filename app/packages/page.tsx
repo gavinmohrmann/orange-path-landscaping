@@ -3,7 +3,7 @@ import Link from 'next/link'
 const packages = [
   {
     name: 'Classic',
-    price: '$1,595',
+    price: '$2,195',
     description: 'A guided design experience with photorealistic renders and a dedicated project manager to bring your vision to life.',
     scope: 'Backyard & side yards',
     highlight: true,
