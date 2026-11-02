@@ -23,25 +23,6 @@ const packages = [
     ],
   },
   {
-    name: 'Signature',
-    price: '$2,195',
-    description: 'Our most comprehensive design experience — day-to-night renders, cost advisor, and expert guidance from start to finish.',
-    scope: 'Entire backyard & side yards',
-    highlight: false,
-    includes: [
-      '2D CAD Landscape Plan',
-      'Plant, hardscape & amenities design',
-      'Curated plant list & material list',
-      'In-person site consultation & kick-off call',
-      'Photorealistic 3D renders (day)',
-      'Night render & lighting plan',
-      '1 revision round',
-      'Dedicated project manager',
-      'Cost advisor',
-    ],
-    notIncluded: [],
-  },
-  {
     name: 'Premium',
     price: '$3,695',
     description: 'Full-property design including exterior architecture — paint, windows, doors — with a master designer and check-in calls throughout.',
@@ -76,7 +57,7 @@ const faqs = [
   },
   {
     q: 'Do you also build what you design?',
-    a: 'Yes. We offer full design-build services, meaning we can take your approved design all the way through construction. Ask us about bundled design + build pricing.',
+    a: 'Yes, and most of our clients go that route. If you build with us there is no design fee: we draw the concept, present it in person, and the full plan set comes with your construction contract. The packages on this page are for homeowners who want to own a plan set outright.',
   },
   {
     q: 'How long does the design process take?',
@@ -192,7 +173,7 @@ export default function PackagesPage() {
           <p className="section-label mb-4">Design Packages</p>
           <h2 className="font-serif text-green-900 text-4xl md:text-5xl mb-3">Plans you own</h2>
           <p className="text-stone-500 max-w-xl leading-relaxed mb-10">For homeowners who want a complete plan set to keep, whether or not we build it.</p>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl">
             {packages.map((pkg) => (
               <div
                 key={pkg.name}
