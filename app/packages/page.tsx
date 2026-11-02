@@ -142,7 +142,7 @@ export default function PackagesPage() {
           <p className="section-label text-orange-light mb-4">Design Services</p>
           <h1 className="font-serif text-white text-5xl md:text-7xl font-normal">Packages</h1>
           <p className="text-white/55 mt-6 text-lg max-w-xl leading-relaxed">
-            Professional landscape design delivered with an in-person consultation — so your plan actually fits your property, your lifestyle, and your budget.
+            Professional landscape design delivered with an in-person consultation — so your plan fits your property, your lifestyle, and your budget.
           </p>
         </div>
       </section>
