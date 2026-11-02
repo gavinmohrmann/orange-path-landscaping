@@ -149,7 +149,7 @@ export default function MaintenancePage() {
       {/* Photos */}
       <section className="bg-cream py-6">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-3">
-          {['native-plants-1.jpg', 'riverstreet-built-2.jpg', 'dan-1.jpg', 'monica-1.jpg'].map((f) => (
+          {['native-plants-1.jpg', 'riverstreet-built-2.jpg', 'sand-point-built-1.jpg', 'riverstreet-built-4.jpg'].map((f) => (
             <div key={f} className="relative aspect-square">
               <Image src={`/images/projects/${f}`} alt="Orange Path Landscaping maintained property" fill className="object-cover" sizes="25vw" />
             </div>
