@@ -2,26 +2,6 @@ import Link from 'next/link'
 
 const packages = [
   {
-    name: 'Essential',
-    price: '$1,195',
-    description: 'Everything you need to confidently plan your outdoor project — at our most accessible price.',
-    scope: 'Backyard & side yards',
-    highlight: false,
-    includes: [
-      '2D CAD Landscape Plan',
-      'Plant, hardscape & amenities design',
-      'Curated plant list & material list',
-      'In-person site consultation',
-    ],
-    notIncluded: [
-      '3D photorealistic renders',
-      'Revision rounds',
-      'Night render & lighting plan',
-      'Project manager',
-      'Cost advisor',
-    ],
-  },
-  {
     name: 'Classic',
     price: '$1,595',
     description: 'A guided design experience with photorealistic renders and a dedicated project manager to bring your vision to life.',
@@ -212,7 +192,7 @@ export default function PackagesPage() {
           <p className="section-label mb-4">Design Packages</p>
           <h2 className="font-serif text-green-900 text-4xl md:text-5xl mb-3">Plans you own</h2>
           <p className="text-stone-500 max-w-xl leading-relaxed mb-10">For homeowners who want a complete plan set to keep, whether or not we build it.</p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
             {packages.map((pkg) => (
               <div
                 key={pkg.name}
