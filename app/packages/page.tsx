@@ -178,9 +178,40 @@ export default function PackagesPage() {
         </div>
       </section>
 
+      {/* Design-Build: concept included */}
+      <section className="bg-white py-16 md:py-20">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-5 gap-10 items-center">
+          <div className="md:col-span-3">
+            <p className="section-label mb-4">Design-Build</p>
+            <h2 className="font-serif text-green-900 text-4xl md:text-5xl mb-5">The concept is on us.</h2>
+            <p className="text-stone-600 leading-relaxed mb-4">
+              Walk the site with Gavin, tell us the budget, and we&apos;ll draw the concept: a rendered view and a plan, presented in person.
+              If you build with us, there&apos;s no design fee; the full plan set comes with your construction contract.
+            </p>
+            <p className="text-stone-500 leading-relaxed">
+              If you&apos;d rather own the drawings outright, the design packages below are yours to keep.
+            </p>
+          </div>
+          <div className="md:col-span-2 bg-green-900 p-8">
+            <p className="text-xs tracking-widest uppercase text-orange-light mb-3">How it works</p>
+            <ol className="space-y-3 text-white/85 text-sm leading-relaxed list-decimal list-inside">
+              <li>Site walk and budget conversation</li>
+              <li>We draw the concept and present it to you</li>
+              <li>Build contract: plan set delivered, no design fee</li>
+            </ol>
+            <a href="/contact" className="mt-7 block text-center py-3 px-6 text-sm tracking-widest uppercase font-medium bg-orange-brand text-white hover:bg-orange-light transition-colors">
+              Book a Site Walk
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Packages grid */}
       <section className="bg-cream py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-6">
+          <p className="section-label mb-4">Design Packages</p>
+          <h2 className="font-serif text-green-900 text-4xl md:text-5xl mb-3">Plans you own</h2>
+          <p className="text-stone-500 max-w-xl leading-relaxed mb-10">For homeowners who want a complete plan set to keep, whether or not we build it.</p>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {packages.map((pkg) => (
               <div
