@@ -132,6 +132,37 @@ export default function MaintenancePage() {
         </div>
       </section>
 
+      {/* Price = time */}
+      <section className="bg-cream py-20 md:py-24">
+        <div className="max-w-7xl mx-auto px-6">
+          <p className="section-label mb-4">How we price</p>
+          <h2 className="font-serif text-green-900 text-4xl md:text-5xl mb-6 max-w-2xl">Your monthly price buys crew time</h2>
+          <p className="text-green-900/80 text-lg leading-relaxed max-w-3xl mb-12">
+            Every plan works the same way: your price buys a set amount of two-person crew time on site, every visit. Lot size, how much is planted, slope and what you want done decide how many minutes your property needs. More minutes, higher price. No mystery about what gets done in a visit, and no arguments later about what you&apos;re paying for.
+          </p>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              { price: '$300', time: 'About 40 minutes', crew: 'two crew, weekly', fit: 'Typical quarter-acre front and back: mow, edge, blow, a pass through the beds, debris hauled.' },
+              { price: '$400', time: 'About 50 minutes', crew: 'two crew, weekly', fit: 'Larger lots or heavier planting: everything above plus hedges, more bed work, roses.' },
+              { price: '$500+', time: 'An hour or more', crew: 'two crew, weekly', fit: 'Estate lots, hedge-heavy and slope properties, or anything that needs real time every week.' },
+            ].map((t) => (
+              <div key={t.price} className="bg-white border border-green-900/10 rounded-lg p-8">
+                <div className="flex items-baseline gap-2 mb-1">
+                  <span className="font-serif text-green-900 text-4xl">{t.price}</span>
+                  <span className="text-green-900/50 text-sm">/ month</span>
+                </div>
+                <p className="text-orange-brand font-medium mb-1">{t.time}</p>
+                <p className="text-green-900/50 text-xs uppercase tracking-widest mb-4">{t.crew}</p>
+                <p className="text-green-900/80 leading-relaxed">{t.fit}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-green-900/60 text-sm mt-8 max-w-3xl">
+            Bi-weekly plans get roughly double the time per visit at the same monthly price. Fertilizer programs, rose and pest treatments, seasonal cutbacks, plant replacement, irrigation repairs beyond a head or emitter, and tree work over 12 feet are quoted separately. We put the exact minutes your price buys in writing with every quote.
+          </p>
+        </div>
+      </section>
+
       {/* What's included */}
       <section className="bg-white py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-6">
