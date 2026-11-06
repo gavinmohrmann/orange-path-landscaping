@@ -288,7 +288,7 @@ export default function PackagesPage() {
             <div className="bg-green-900 p-8">
               <p className="text-xs tracking-widest uppercase text-orange-light mb-3">Maintenance</p>
               <div className="flex items-baseline gap-2 mb-1">
-                <span className="font-serif text-white text-4xl">from $250</span>
+                <span className="font-serif text-white text-4xl">from $300</span>
                 <span className="text-white/50 text-sm">/ month</span>
               </div>
               <p className="text-white/40 text-xs tracking-wide uppercase mb-6">Weekly visits</p>

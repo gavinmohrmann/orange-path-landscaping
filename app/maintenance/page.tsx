@@ -4,12 +4,12 @@ import Link from 'next/link'
 import QuoteForm from '@/components/QuoteForm'
 
 export const metadata: Metadata = {
-  title: 'Landscape Maintenance San Juan Capistrano & South OC — from $250/mo | Orange Path Landscaping',
+  title: 'Landscape Maintenance San Juan Capistrano & South OC — from $300/mo | Orange Path Landscaping',
   description:
-    'Weekly landscape maintenance in San Juan Capistrano, Dana Point, San Clemente, Laguna Niguel and Mission Viejo. Veteran-owned, licensed C-27, insured, 5-star rated. Weekly service from $250/month. Call or text (949) 371-6356 for a quote.',
+    'Weekly landscape maintenance in San Juan Capistrano, Dana Point, San Clemente, Laguna Niguel and Mission Viejo. Veteran-owned, licensed C-27, insured, 5-star rated. Weekly service from $300/month. Call or text (949) 371-6356 for a quote.',
   openGraph: {
     title: 'Landscape Maintenance — South Orange County | Orange Path Landscaping',
-    description: 'Weekly yard and landscape maintenance from $250/month. Veteran-owned, licensed, insured, 5 stars on Google.',
+    description: 'Weekly yard and landscape maintenance from $300/month. Veteran-owned, licensed, insured, 5 stars on Google.',
     url: 'https://orangepathlandscaping.com/maintenance',
   },
 }
@@ -57,7 +57,7 @@ const areas = ['San Juan Capistrano', 'Dana Point', 'San Clemente', 'Laguna Nigu
 const faqs = [
   {
     q: 'What does weekly service cost?',
-    a: 'Most homes in our route area run $250 to $400 a month for weekly service, depending on lot size, how much is planted versus hardscape, and slope. We give you a firm monthly price after a 15-minute walk-through, and it stays fixed. Bi-weekly service is available at a lower monthly rate.',
+    a: 'Most homes in our route area run $300 to $450 a month for weekly service, depending on lot size, how much is planted versus hardscape, and slope. Your monthly price buys a set amount of crew time on site each visit; we give you a firm number after a 15-minute walk-through, and it stays fixed. Bi-weekly service is available at a lower monthly rate.',
   },
   {
     q: 'Is there a contract?',
@@ -121,13 +121,13 @@ export default function MaintenancePage() {
           <div>
             <p className="text-xs tracking-widest uppercase text-orange-light mb-2">Weekly service</p>
             <div className="flex items-baseline gap-2">
-              <span className="font-serif text-white text-5xl">from $250</span>
+              <span className="font-serif text-white text-5xl">from $300</span>
               <span className="text-white/50 text-sm">/ month</span>
             </div>
           </div>
           <p className="text-white/70 leading-relaxed md:col-span-2">
             Firm monthly price after a 15-minute walk-through. No contract, invoiced monthly, cancel with 30 days&apos; notice.
-            Bi-weekly service available. Most homes in our area land between $250 and $400 depending on lot size, planting and slope.
+            Bi-weekly service available. Most homes in our area land between $300 and $450 depending on lot size, planting and slope.
           </p>
         </div>
       </section>

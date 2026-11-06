@@ -134,7 +134,7 @@ export default function ServicesPage() {
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-6 max-w-5xl">
             {[
-              { service: 'Landscape maintenance', price: 'from $250 / month' },
+              { service: 'Landscape maintenance', price: 'from $300 / month' },
               { service: 'Sod installation', price: 'from $7 / sq ft' },
               { service: 'Artificial turf', price: 'from $9.50 / sq ft' },
               { service: 'Paver installation', price: 'from $15 / sq ft' },
