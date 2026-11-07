@@ -20,7 +20,7 @@ const included = [
   { t: 'Beds kept weed-free, no chemicals', d: 'Hand weeding every visit, not a once-a-month blitz and not a spray bottle. Weeds never get big enough to seed.' },
   { t: 'Pruning done on a schedule', d: 'Shrubs shaped to the plant, not sheared into balls. Hedges, perennials and ornamental grasses cut at the right time of year.' },
   { t: 'Mow, edge, blow (quietly)', d: 'Battery mowers, trimmers and blowers, about half the noise of gas and no exhaust. Turf mowed and edged where you have it; walkways, patio and driveway blown clean before we leave.' },
-  { t: 'Irrigation checked every visit', d: 'We run the zones, catch broken heads and clogged emitters, and adjust the controller with the seasons. Small fixes are handled on the spot.' },
+  { t: 'Irrigation checked seasonally', d: 'We run the zones, catch broken heads and clogged emitters, and adjust the controller as the seasons change. Small fixes are handled on the spot.' },
   { t: 'Debris and leaf removal', d: 'Everything we cut leaves with us. Seasonal leaf drop is cleared as it falls, not after it mats.' },
   { t: 'A crew that knows your yard', d: 'Same small crew every week, so they notice when something changes. You text Gavin directly if anything comes up.' },
 ]
@@ -90,7 +90,7 @@ export default function MaintenancePage() {
             </h1>
             <p className="text-stone-500 mt-6 text-lg max-w-xl leading-relaxed">
               Same small crew every week. Beds weeded by hand, no chemicals. Battery equipment, about half as loud as a gas crew.
-              Irrigation checked every visit, and an owner you can text. Serving San Juan Capistrano and the surrounding coast.
+              Irrigation checked seasonally, and an owner you can text. Serving San Juan Capistrano and the surrounding coast.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a href="tel:9493716356" className="btn-primary">Call or Text (949) 371-6356</a>
