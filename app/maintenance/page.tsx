@@ -138,7 +138,7 @@ export default function MaintenancePage() {
           <p className="section-label mb-4">How we price</p>
           <h2 className="font-serif text-green-900 text-4xl md:text-5xl mb-6 max-w-2xl">Your monthly price buys crew time</h2>
           <p className="text-green-900/80 text-lg leading-relaxed max-w-3xl mb-12">
-            Every plan works the same way: your price buys a set amount of two-person crew time on site, every visit. Lot size, how much is planted, slope and what you want done decide how many minutes your property needs. More minutes, higher price. No mystery about what gets done in a visit, and no arguments later about what you&apos;re paying for.
+            Every plan works the same way: your price buys a set amount of two-person crew time on site, every visit. Lot size, how much is planted, slope and what you want done decide how many minutes your property needs. More minutes, higher price.
           </p>
           <div className="grid md:grid-cols-3 gap-6">
             {[
