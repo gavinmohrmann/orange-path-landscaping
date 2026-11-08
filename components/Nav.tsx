@@ -24,6 +24,7 @@ export default function Nav() {
     { href: '/work', label: 'Our Work' },
     { href: '/services', label: 'Services' },
     { href: '/hardscape', label: 'Hardscape' },
+    { href: '/packages', label: 'Packages' },
     { href: '/maintenance', label: 'Maintenance' },
     { href: '/about', label: 'About' },
     { href: '/contact', label: 'Contact' },

@@ -146,13 +146,14 @@ export default function Home() {
           <h2 className="font-serif text-white text-4xl text-center mb-16">Full-Service Landscaping</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { title: 'Landscape Design', desc: '3D renders, site plans, and planting layouts so you can see it before we build it.' },
-              { title: 'Hardscape', desc: 'Paver patios and driveways, exposed-aggregate concrete, retaining walls — built on compacted base.' },
-              { title: 'Property Care', desc: 'Ongoing maintenance, irrigation audits, weeding, and tree trimming.' },
+              { title: 'Landscape Design', desc: '3D renders, site plans, and planting layouts so you can see it before we build it. Build with us and the design concept is on us.', href: '/packages', cta: 'See design packages' },
+              { title: 'Hardscape', desc: 'Paver patios and driveways, exposed-aggregate concrete, retaining walls — built on compacted base.', href: '/hardscape', cta: 'Pavers, concrete & walls' },
+              { title: 'Property Care', desc: 'Weekly maintenance from a crew that knows what the plants are supposed to look like.', href: '/maintenance', cta: 'Maintenance from $300/mo' },
             ].map((service) => (
               <div key={service.title} className="border-t border-white/20 pt-6">
                 <h3 className="font-serif text-white text-xl mb-3">{service.title}</h3>
                 <p className="text-white/55 text-sm leading-relaxed">{service.desc}</p>
+                <Link href={service.href} className="inline-block mt-4 text-xs tracking-widest uppercase text-orange-light hover:text-white transition-colors">{service.cta} →</Link>
               </div>
             ))}
           </div>

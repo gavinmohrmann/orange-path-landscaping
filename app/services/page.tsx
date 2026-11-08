@@ -23,7 +23,7 @@ const services = [
       },
       {
         title: 'Landscape Design',
-        description: 'We start with a detailed site analysis and design brief, then produce photorealistic 3D renders and 2D site plans so you know exactly what you\'re getting before a single shovel hits the ground. Multiple design options, one great outcome.',
+        description: 'We start with a detailed site analysis and design brief, then produce photorealistic 3D renders and 2D site plans so you know exactly what you\'re getting before a single shovel hits the ground. Multiple design options, one great outcome. Build with us and the design concept is on us; see our design packages.',
         features: ['Site analysis & design brief', '3D photorealistic renders', '2D planting plans', 'Multiple design iterations', 'Plant selection & specification'],
       },
       {
