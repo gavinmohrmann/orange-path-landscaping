@@ -90,6 +90,11 @@ export default function HardscapePage() {
               compacted base with proper drainage, built by one crew with the owner on site, and backed by a 10-year
               workmanship warranty.
             </p>
+            <p className="text-stone-500 mt-4 text-lg max-w-xl leading-relaxed">
+              Most people know they want pavers or concrete but don&apos;t have a layout yet. That&apos;s fine. If you build with us,
+              the design concept is on us: we draw it, you see it before anything is poured.{' '}
+              <Link href="/packages" className="text-green-900 underline">How our design packages work</Link>.
+            </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a href="tel:9493716356" className="btn-primary">Call or Text (949) 371-6356</a>
               <a href="#quote" className="inline-block px-8 py-4 border border-green-900 text-green-900 text-sm tracking-widest uppercase font-medium hover:bg-green-900 hover:text-white transition-colors">
