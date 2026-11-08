@@ -91,9 +91,10 @@ export default function HardscapePage() {
               workmanship warranty.
             </p>
             <p className="text-stone-500 mt-4 text-lg max-w-xl leading-relaxed">
-              Most people know they want pavers or concrete but don&apos;t have a layout yet. That&apos;s fine. If you build with us,
-              the design concept is on us: we draw it, you see it before anything is poured.{' '}
-              <Link href="/packages" className="text-green-900 underline">How our design packages work</Link>.
+              Most projects start without a layout, just a space and an idea of pavers or concrete. After the site visit we
+              draw a scaled plan of the area, with the pattern, edges, steps and any planting around it, and walk through it
+              with you before the proposal is priced. When you build with us, that design work is included in the project.{' '}
+              <Link href="/packages" className="text-green-900 underline">More on how the design step works</Link>.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a href="tel:9493716356" className="btn-primary">Call or Text (949) 371-6356</a>
