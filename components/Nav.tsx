@@ -23,6 +23,7 @@ export default function Nav() {
   const links = [
     { href: '/work', label: 'Our Work' },
     { href: '/services', label: 'Services' },
+    { href: '/hardscape', label: 'Hardscape' },
     { href: '/packages', label: 'Packages' },
     { href: '/maintenance', label: 'Maintenance' },
     { href: '/blog', label: 'Field Notes' },
