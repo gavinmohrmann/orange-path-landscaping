@@ -144,11 +144,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <p className="section-label text-orange-light mb-4 text-center">What We Do</p>
           <h2 className="font-serif text-white text-4xl text-center mb-16">Full-Service Landscaping</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {[
               { title: 'Landscape Design', desc: '3D renders, site plans, and planting layouts so you can see it before we build it.' },
-              { title: 'Hardscapes', desc: 'Paver patios, driveways, walkways and retaining walls built on compacted base.' },
-              { title: 'Decorative Concrete', desc: 'Exposed-aggregate patios and driveways, seeded river stone, hand-finished.' },
+              { title: 'Hardscape', desc: 'Paver patios and driveways, exposed-aggregate concrete, retaining walls — built on compacted base.' },
               { title: 'Property Care', desc: 'Ongoing maintenance, irrigation audits, weeding, and tree trimming.' },
             ].map((service) => (
               <div key={service.title} className="border-t border-white/20 pt-6">

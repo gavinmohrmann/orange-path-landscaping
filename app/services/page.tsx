@@ -17,19 +17,9 @@ const services = [
     category: 'Design & Build',
     items: [
       {
-        title: 'Hardscapes',
-        description: 'From paver driveways to flagstone patios, we design and install hardscape elements that tie your outdoor space together. Clean lines, quality materials, lasting results.',
-        features: ['10-year workmanship warranty', 'Paver driveways & walkways', 'Patio design & installation', 'Geotextile & compacted base', 'Edging & borders'],
-      },
-      {
-        title: 'Decorative Concrete',
-        description: 'Exposed-aggregate concrete — seeded river stone washed to reveal the stone itself, no dye or color needed. It is a specialty finish few crews still do well, and it lives or dies on the base underneath and how carefully the exposure wash is contained.',
-        features: ['Exposed-aggregate finish', 'Demolition & haul-off', 'Compacted base & steel reinforcement', 'Two-coat penetrating sealer', 'Full wash-water containment'],
-      },
-      {
-        title: 'Retaining Walls',
-        description: 'Structurally engineered retaining walls that solve grading challenges while enhancing the beauty of your property. We work with natural stone, concrete block, and poured concrete systems.',
-        features: ['10-year workmanship warranty', 'Gravity & segmental block walls', 'Natural stone options', 'Drainage integration', 'Hillside stabilization'],
+        title: 'Hardscape',
+        description: 'Paver patios, walkways and driveways; exposed-aggregate concrete; retaining walls and steps. All of it on geotextile and a compacted base with real drainage, because the base is the job and the surface is just what you see. Pavers from $15/sq ft, exposed aggregate from $25/sq ft, walls quoted per project. 10-year workmanship warranty.',
+        features: ['Paver patios, driveways & walkways', 'Exposed-aggregate concrete (demo & haul-off included)', 'Retaining walls, steps & seat walls', 'Compacted base, steel, drainage', '10-year workmanship warranty'],
       },
       {
         title: 'Landscape Design',
