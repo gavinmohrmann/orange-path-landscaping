@@ -4,10 +4,10 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Landscaping Services | Orange County, CA — Orange Path Landscaping',
-  description: 'Full-service landscaping in Orange County: 3D landscape design, retaining walls, paver hardscapes, exposed-aggregate concrete, artificial turf & sod, pergolas, native & drought-tolerant plants, property care, and irrigation audits. Free consultations. LIC #1146854.',
+  description: 'Full-service landscaping in Orange County: 3D landscape design, retaining walls, paver hardscapes, exposed-aggregate concrete, artificial turf & sod, native & drought-tolerant plants, property care, and irrigation audits. Free consultations. LIC #1146854.',
   openGraph: {
     title: 'Landscaping Services — Orange Path Landscaping | Orange County, CA',
-    description: 'Landscape design, retaining walls, paver hardscapes, exposed-aggregate concrete, artificial turf, pergolas, native plants, and property care across Orange County. Free consultations.',
+    description: 'Landscape design, retaining walls, paver hardscapes, exposed-aggregate concrete, artificial turf, native plants, and property care across Orange County. Free consultations.',
     url: 'https://orangepathlandscaping.com/services',
   },
 }
@@ -35,11 +35,6 @@ const services = [
         title: 'Landscape Design',
         description: 'We start with a detailed site analysis and design brief, then produce photorealistic 3D renders and 2D site plans so you know exactly what you\'re getting before a single shovel hits the ground. Multiple design options, one great outcome.',
         features: ['Site analysis & design brief', '3D photorealistic renders', '2D planting plans', 'Multiple design iterations', 'Plant selection & specification'],
-      },
-      {
-        title: 'Pergolas & Decks',
-        description: 'Custom-designed outdoor structures that extend your living space into the garden. We design pergolas, shade structures, and decks that complement your home\'s architecture.',
-        features: ['10-year workmanship warranty', 'Custom pergola design', 'Wood & aluminum options', 'Deck construction', 'Lighting & wiring coordination'],
       },
       {
         title: 'Artificial Turf & Sod',

@@ -4,10 +4,10 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Orange Path Landscaping | Landscape Design, Hardscapes & Property Care — Orange County, CA',
-  description: 'Orange County\'s landscape design and construction company. 3D design renders, hardscapes, retaining walls, pergolas, native plants, and property care. Veteran-owned. LIC #1146854. Free consultations.',
+  description: 'Orange County\'s landscape design and construction company. 3D design renders, hardscapes, retaining walls, exposed-aggregate concrete, native plants, and property care. Veteran-owned. LIC #1146854. Free consultations.',
   openGraph: {
     title: 'Orange Path Landscaping | Orange County, CA',
-    description: 'Landscape design, hardscapes, retaining walls, pergolas, and property care. Veteran-owned. Free consultations.',
+    description: 'Landscape design, hardscapes, retaining walls, concrete, and property care. Veteran-owned. Free consultations.',
     url: 'https://orangepathlandscaping.com',
   },
 }
@@ -90,7 +90,7 @@ export default function Home() {
               Beautiful design.<br />Lasting craftsmanship.
             </h2>
             <p className="text-stone-600 leading-relaxed mb-4">
-              At Orange Path, we treat every property as a canvas. From photorealistic 3D renders that let you see exactly what you&apos;re getting, to the final planted stone and pergola — we own every step.
+              At Orange Path, we treat every property as a canvas. From photorealistic 3D renders that let you see exactly what you&apos;re getting, to the last paver set and plant in the ground — we own every step.
             </p>
             <p className="text-stone-600 leading-relaxed mb-10">
               We specialize in landscape design, hardscapes, retaining walls, native plantings, and full property care. Based in Orange County. Veteran owned and operated.
@@ -147,8 +147,8 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { title: 'Landscape Design', desc: '3D renders, site plans, and planting layouts so you can see it before we build it.' },
-              { title: 'Hardscapes', desc: 'Pavers, retaining walls, walkways, and outdoor structures built to last.' },
-              { title: 'Pergolas & Decks', desc: 'Custom outdoor living spaces that extend your home into the garden.' },
+              { title: 'Hardscapes', desc: 'Paver patios, driveways, walkways and retaining walls built on compacted base.' },
+              { title: 'Decorative Concrete', desc: 'Exposed-aggregate patios and driveways, seeded river stone, hand-finished.' },
               { title: 'Property Care', desc: 'Ongoing maintenance, irrigation audits, weeding, and tree trimming.' },
             ].map((service) => (
               <div key={service.title} className="border-t border-white/20 pt-6">
