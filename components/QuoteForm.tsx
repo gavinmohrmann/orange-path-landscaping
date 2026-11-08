@@ -5,7 +5,7 @@ import { reportConversion, CONV_FORM } from '@/components/GoogleTag'
 
 // Short lead form used on landing pages (maintenance). Posts to the same
 // FormSubmit inbox as the contact page and fires the Google Ads conversion.
-export default function QuoteForm({ subject = 'New website lead — Orange Path', service = '' }: { subject?: string; service?: string }) {
+export default function QuoteForm({ subject = 'New website lead — Orange Path', service = '', footnote = 'No contracts. Month to month. We respond within one business day.' }: { subject?: string; service?: string; footnote?: string }) {
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState(false)
   const [sending, setSending] = useState(false)
@@ -84,7 +84,7 @@ export default function QuoteForm({ subject = 'New website lead — Orange Path'
           Something went wrong — please call or text Gavin at (949) 371-6356.
         </p>
       )}
-      <p className="text-stone-400 text-xs text-center">No contracts. Month to month. We respond within one business day.</p>
+      <p className="text-stone-400 text-xs text-center">{footnote}</p>
     </form>
   )
 }

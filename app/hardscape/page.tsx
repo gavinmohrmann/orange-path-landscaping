@@ -251,7 +251,7 @@ export default function HardscapePage() {
             </p>
           </div>
           <div>
-            <QuoteForm subject="New HARDSCAPE lead — website /hardscape" service="Hardscape" />
+            <QuoteForm subject="New HARDSCAPE lead — website /hardscape" service="Hardscape" footnote="Free site visit. Fixed price in writing. We respond within one business day." />
           </div>
         </div>
       </section>
