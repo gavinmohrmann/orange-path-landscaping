@@ -83,7 +83,7 @@ export default function HardscapePage() {
           <div className="md:col-span-3">
             <p className="section-label mb-4">Hardscape · South Orange County</p>
             <h1 className="font-serif text-green-900 text-4xl md:text-6xl font-normal leading-tight">
-              Pavers, concrete and retaining walls built to still look right in year ten.
+              Pavers, concrete and retaining walls.
             </h1>
             <p className="text-stone-500 mt-6 text-lg max-w-xl leading-relaxed">
               Paver patios, walkways and driveways. Exposed-aggregate concrete. Retaining walls and steps. Built by one crew
