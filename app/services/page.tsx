@@ -17,24 +17,9 @@ const services = [
     category: 'Design & Build',
     items: [
       {
-        title: 'Landscape Design',
-        description: 'We start with a detailed site analysis and design brief, then produce photorealistic 3D renders and 2D site plans so you know exactly what you\'re getting before a single shovel hits the ground. Multiple design options, one great outcome.',
-        features: ['Site analysis & design brief', '3D photorealistic renders', '2D planting plans', 'Multiple design iterations', 'Plant selection & specification'],
-      },
-      {
-        title: 'Retaining Walls',
-        description: 'Structurally engineered retaining walls that solve grading challenges while enhancing the beauty of your property. We work with natural stone, concrete block, and poured concrete systems.',
-        features: ['10-year workmanship warranty', 'Gravity & segmental block walls', 'Natural stone options', 'Drainage integration', 'Hillside stabilization'],
-      },
-      {
         title: 'Hardscapes',
         description: 'From paver driveways to flagstone patios, we design and install hardscape elements that tie your outdoor space together. Clean lines, quality materials, lasting results.',
         features: ['10-year workmanship warranty', 'Paver driveways & walkways', 'Patio design & installation', 'Geotextile & compacted base', 'Edging & borders'],
-      },
-      {
-        title: 'Artificial Turf & Sod',
-        description: 'Turf is a commodity — the same product from the same manufacturers is available to everyone. What separates a lawn that still looks right in year eight from one that seams apart in year two is the base under it. We build the base properly and back the workmanship for 10 years.',
-        features: ['10-year workmanship warranty', 'Compacted base & drainage', 'Seam and edge detailing', 'Natural sod installation', 'Pet-friendly infill options'],
       },
       {
         title: 'Decorative Concrete',
@@ -42,9 +27,24 @@ const services = [
         features: ['Exposed-aggregate finish', 'Demolition & haul-off', 'Compacted base & steel reinforcement', 'Two-coat penetrating sealer', 'Full wash-water containment'],
       },
       {
+        title: 'Retaining Walls',
+        description: 'Structurally engineered retaining walls that solve grading challenges while enhancing the beauty of your property. We work with natural stone, concrete block, and poured concrete systems.',
+        features: ['10-year workmanship warranty', 'Gravity & segmental block walls', 'Natural stone options', 'Drainage integration', 'Hillside stabilization'],
+      },
+      {
+        title: 'Landscape Design',
+        description: 'We start with a detailed site analysis and design brief, then produce photorealistic 3D renders and 2D site plans so you know exactly what you\'re getting before a single shovel hits the ground. Multiple design options, one great outcome.',
+        features: ['Site analysis & design brief', '3D photorealistic renders', '2D planting plans', 'Multiple design iterations', 'Plant selection & specification'],
+      },
+      {
         title: 'Pergolas & Decks',
         description: 'Custom-designed outdoor structures that extend your living space into the garden. We design pergolas, shade structures, and decks that complement your home\'s architecture.',
         features: ['10-year workmanship warranty', 'Custom pergola design', 'Wood & aluminum options', 'Deck construction', 'Lighting & wiring coordination'],
+      },
+      {
+        title: 'Artificial Turf & Sod',
+        description: 'Turf is a commodity — the same product from the same manufacturers is available to everyone. What separates a lawn that still looks right in year eight from one that seams apart in year two is the base under it. We build the base properly and back the workmanship for 10 years.',
+        features: ['10-year workmanship warranty', 'Compacted base & drainage', 'Seam and edge detailing', 'Natural sod installation', 'Pet-friendly infill options'],
       },
       {
         title: 'Native Plants',
