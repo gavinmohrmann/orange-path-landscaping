@@ -31,6 +31,10 @@ export default function Footer() {
               {[
                 { href: '/work', label: 'Our Work' },
                 { href: '/services', label: 'Services' },
+                { href: '/hardscape', label: 'Hardscape' },
+                { href: '/maintenance', label: 'Maintenance' },
+                { href: '/packages', label: 'Packages' },
+                { href: '/blog', label: 'Field Notes' },
                 { href: '/about', label: 'About' },
                 { href: '/contact', label: 'Contact' },
               ].map((link) => (
