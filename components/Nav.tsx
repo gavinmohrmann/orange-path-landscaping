@@ -24,9 +24,7 @@ export default function Nav() {
     { href: '/work', label: 'Our Work' },
     { href: '/services', label: 'Services' },
     { href: '/hardscape', label: 'Hardscape' },
-    { href: '/packages', label: 'Packages' },
     { href: '/maintenance', label: 'Maintenance' },
-    { href: '/blog', label: 'Field Notes' },
     { href: '/about', label: 'About' },
     { href: '/contact', label: 'Contact' },
   ]
@@ -49,13 +47,13 @@ export default function Nav() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3">
+          <Link href="/" className="flex items-center gap-3 shrink-0">
             <Image
               src="/images/logo-icon.png"
               alt="Orange Path Landscaping"
               width={48}
               height={48}
-              className={`rounded-full transition-all duration-300 ${useDarkText ? 'hidden' : 'block'}`}
+              className={`rounded-full shrink-0 transition-all duration-300 ${useDarkText ? 'hidden' : 'block'}`}
               priority
             />
             <Image
