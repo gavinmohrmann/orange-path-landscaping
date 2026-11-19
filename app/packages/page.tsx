@@ -123,8 +123,8 @@ export default function PackagesPage() {
               <li>We draw the concept and present it to you</li>
               <li>Like it? We agree on a price, sign a contract and build it</li>
             </ol>
-            <a href="/contact" className="mt-7 block text-center py-3 px-6 text-sm tracking-widest uppercase font-medium bg-orange-brand text-white hover:bg-orange-light transition-colors">
-              Book a Site Walk
+            <a href="https://calendly.com/gavin-orangepathlandscaping/30min" target="_blank" rel="noopener noreferrer" className="mt-7 block text-center py-3 px-6 text-sm tracking-widest uppercase font-medium bg-orange-brand text-white hover:bg-orange-light transition-colors">
+              Book a Free Phone Consultation
             </a>
           </div>
         </div>
