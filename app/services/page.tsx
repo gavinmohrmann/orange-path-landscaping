@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Landscaping Services | Orange County, CA — Orange Path Landscaping',
-  description: 'Full-service landscaping in Orange County: 3D landscape design, retaining walls, paver hardscapes, exposed-aggregate concrete, artificial turf & sod, native & drought-tolerant plants, property care, and irrigation audits. Free consultations. LIC #1146854.',
+  description: 'Full-service landscaping in Orange County: design-build landscaping, retaining walls, paver hardscapes, concrete, artificial turf & sod, native & drought-tolerant plants, property care, and irrigation audits. Free phone consultations. LIC #1146854.',
   openGraph: {
     title: 'Landscaping Services — Orange Path Landscaping | Orange County, CA',
     description: 'Landscape design, retaining walls, paver hardscapes, exposed-aggregate concrete, artificial turf, native plants, and property care across Orange County. Free consultations.',
@@ -18,13 +18,13 @@ const services = [
     items: [
       {
         title: 'Hardscape',
-        description: 'Paver patios, walkways and driveways; exposed-aggregate concrete; retaining walls and steps. All of it on geotextile and a compacted base with real drainage, because the base is the job and the surface is just what you see. Pavers from $15/sq ft, exposed aggregate from $25/sq ft, walls quoted per project. 10-year workmanship warranty.',
-        features: ['Paver patios, driveways & walkways', 'Exposed-aggregate concrete (demo & haul-off included)', 'Retaining walls, steps & seat walls', 'Compacted base, steel, drainage', '10-year workmanship warranty'],
+        description: 'Paver patios, walkways and driveways; exposed-aggregate concrete; retaining walls and steps. All of it on geotextile and a compacted base with real drainage, because the base is the job and the surface is just what you see. Pavers from $18/sq ft with materials, concrete from $15/sq ft, walls quoted per project. 10-year workmanship warranty.',
+        features: ['Paver patios, driveways & walkways', 'Concrete flatwork, including exposed aggregate', 'Retaining walls, steps & seat walls', 'Compacted base, steel, drainage', '10-year workmanship warranty'],
       },
       {
         title: 'Landscape Design',
-        description: 'We start with a detailed site analysis and design brief, then produce photorealistic 3D renders and 2D site plans so you know exactly what you\'re getting before a single shovel hits the ground. Multiple design options, one great outcome. Build with us and the design concept is on us.',
-        features: ['Site analysis & design brief', '3D photorealistic renders', '2D planting plans', 'Multiple design iterations', 'Plant selection & specification'],
+        description: 'We don\'t sell design by itself. When we build your project, the design concept is on us. It starts with a free phone call about what you want and your budget. If it looks like a fit, Gavin walks the property, and we draw a concept: a rendered view, a plan and a plant list, presented to you in person along with a price to build it. If it isn\'t right, you walk away and owe nothing.',
+        features: ['Free phone consultation', 'In-person site walk', 'Rendered concept and plan, presented in person', 'Plant palette and plant list', 'A price to build it, with the concept', 'No charge if you don\'t move forward'],
       },
       {
         title: 'Artificial Turf & Sod',
@@ -50,16 +50,6 @@ const services = [
         title: 'Irrigation Audits',
         description: 'A poorly tuned irrigation system wastes money and can damage plants. We audit your system, identify inefficiencies, and optimize for water savings.',
         features: ['Full system inspection', 'Coverage & runtime analysis', 'Smart controller programming', 'Leak detection & repair', 'Water district rebate assistance'],
-      },
-      {
-        title: 'Weeding',
-        description: 'Hand-weeding and pre-emergent applications to keep unwanted plants out of your garden beds and hardscape joints.',
-        features: ['Hand removal', 'Pre-emergent treatments', 'Mulch application', 'Ongoing monitoring'],
-      },
-      {
-        title: 'Tree Trimming',
-        description: 'Proper pruning for structure, health, and aesthetics. We follow ISA best practices to keep your trees safe and beautiful.',
-        features: ['Crown cleaning & thinning', 'Structural pruning', 'Vista pruning', 'Deadwood removal', 'Palm trimming'],
       },
     ],
   },
@@ -117,13 +107,12 @@ export default function ServicesPage() {
           <p className="text-stone-500 text-sm leading-relaxed max-w-2xl mb-12">
             Most contractors won&apos;t tell you what anything costs until they&apos;re standing in your yard. Here&apos;s where our work starts, so you can decide whether we&apos;re a fit before either of us spends an afternoon.
           </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-6 max-w-5xl">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-6 max-w-5xl">
             {[
               { service: 'Landscape maintenance', price: 'from $300 / month' },
-              { service: 'Sod installation', price: 'from $7 / sq ft' },
-              { service: 'Artificial turf', price: 'from $9.50 / sq ft' },
-              { service: 'Paver installation', price: 'from $15 / sq ft' },
-              { service: 'Exposed-aggregate concrete', price: 'from $25 / sq ft' },
+              { service: 'Artificial turf', price: 'from $9.25 / sq ft' },
+              { service: 'Paver installation', price: 'from $18 / sq ft, materials included' },
+              { service: 'Concrete', price: 'from $15 / sq ft' },
             ].map((row) => (
               <div key={row.service} className="border-b border-stone-100 pb-4">
                 <p className="text-green-900 text-base mb-1">{row.service}</p>
@@ -144,9 +133,9 @@ export default function ServicesPage() {
           <h2 className="font-serif text-white text-4xl mb-16">Our Process</h2>
           <div className="grid md:grid-cols-4 gap-8">
             {[
-              { step: '01', title: 'Consultation', desc: 'We visit your property, listen to your vision, and assess what\'s possible.' },
-              { step: '02', title: 'Design', desc: 'We produce 3D renders and site plans. You see it before we build it.' },
-              { step: '03', title: 'Build', desc: 'Our crew executes the plan with precision and quality craftsmanship.' },
+              { step: '01', title: 'Phone Consultation', desc: 'A free call about what you want done, your timeline and your budget.' },
+              { step: '02', title: 'Site Walk & Design', desc: 'We walk the property, then present a design concept and a price to build it. No charge if you stop here.' },
+              { step: '03', title: 'Build', desc: 'One crew, with the owner on site, builds what you approved.' },
               { step: '04', title: 'Care', desc: 'Ongoing maintenance keeps your landscape looking its best year-round.' },
             ].map((step) => (
               <div key={step.step} className="border-t border-white/20 pt-6">
@@ -164,7 +153,7 @@ export default function ServicesPage() {
         <div className="max-w-2xl mx-auto px-6">
           <h2 className="font-serif text-green-900 text-4xl mb-4">Ready to Get Started?</h2>
           <p className="text-stone-500 mb-8 leading-relaxed">Free phone consultations for all Design & Build projects. We&apos;re Orange County local, and if it&apos;s a fit we&apos;ll come see your space.</p>
-          <Link href="/contact" className="btn-primary">Schedule a Consultation</Link>
+          <Link href="/contact" className="btn-primary">Schedule a Phone Consultation</Link>
         </div>
       </section>
     </>
