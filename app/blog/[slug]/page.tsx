@@ -58,7 +58,7 @@ export default function PostPage({ params }: { params: { slug: string } }) {
             rel="noopener noreferrer"
             className="btn-primary"
           >
-            Book a Free Consultation
+            Book a Free Phone Consultation
           </a>
         </div>
       </section>

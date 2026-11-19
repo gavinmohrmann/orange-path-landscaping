@@ -62,7 +62,7 @@ export default function ContactClient() {
               rel="noopener noreferrer"
               className="bg-orange-brand hover:bg-orange-500 text-white font-medium px-8 py-5 block transition-colors"
             >
-              <span className="block text-lg">Book a Free Consultation</span>
+              <span className="block text-lg">Book a Free Phone Consultation</span>
               <span className="block text-white/70 text-sm mt-1">Schedule a free 30-minute call</span>
             </a>
             <a

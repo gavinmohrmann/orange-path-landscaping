@@ -272,7 +272,7 @@ export default function PackagesPage() {
             rel="noopener noreferrer"
             className="btn-primary"
           >
-            Book a Free Consultation
+            Book a Free Phone Consultation
           </a>
         </div>
       </section>

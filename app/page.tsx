@@ -75,7 +75,7 @@ export default function Home() {
           </p>
           <div className="flex flex-wrap gap-4">
             <Link href="/work" className="btn-outline">View Our Work</Link>
-            <a href="https://calendly.com/gavin-orangepathlandscaping/30min" target="_blank" rel="noopener noreferrer" className="btn-primary">Book a Free Consultation</a>
+            <a href="https://calendly.com/gavin-orangepathlandscaping/30min" target="_blank" rel="noopener noreferrer" className="btn-primary">Book a Free Phone Consultation</a>
           </div>
         </div>
 
@@ -180,7 +180,7 @@ export default function Home() {
           <p className="text-white/65 mb-10 leading-relaxed">
             Every great landscape starts with a conversation. Tell us about your space and we&apos;ll show you what&apos;s possible.
           </p>
-          <a href="https://calendly.com/gavin-orangepathlandscaping/30min" target="_blank" rel="noopener noreferrer" className="btn-primary">Book a Free Consultation</a>
+          <a href="https://calendly.com/gavin-orangepathlandscaping/30min" target="_blank" rel="noopener noreferrer" className="btn-primary">Book a Free Phone Consultation</a>
         </div>
       </section>
     </>
