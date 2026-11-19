@@ -19,15 +19,15 @@ const GOOGLE_REVIEWS_URL = 'https://www.google.com/maps/search/?api=1&query=Oran
 const work = [
   {
     title: 'Paver patios, walkways & driveways',
-    price: 'from $15 / sq ft',
+    price: 'from $18 / sq ft, materials included',
     d: 'Interlocking pavers over geotextile and a compacted base, sand-set and edge-restrained so the field stays flat and tight for decades. Driveways get a thicker base for vehicle loads. Random, herringbone or running-bond patterns; borders and inlays on request.',
     bullets: ['Geotextile separation + compacted Class II base', 'Concrete or spiked edge restraint on every edge', 'Polymeric sand joints', 'Driveway-rated base depth'],
   },
   {
-    title: 'Exposed-aggregate concrete',
-    price: 'from $25 / sq ft',
-    d: 'Seeded river stone washed to reveal the stone itself, no dye needed. It is a specialty finish few crews still do well, and it lives or dies on the base underneath, the timing of the exposure wash, and keeping the wash water off everything around it. We demo and haul off the old surface, set steel on chairs, pour, seed, wash and seal.',
-    bullets: ['Demolition and haul-off included', '#3 or #4 rebar on chairs, mid-slab', 'Del Rio or Mexican beach pebble', 'Two-coat penetrating sealer'],
+    title: 'Concrete, including exposed aggregate',
+    price: 'from $15 / sq ft',
+    d: 'Poured concrete patios, walks and driveways on a compacted base with steel. Standard finishes start at $15 a square foot. Seeded exposed aggregate, where river stone is broadcast onto the fresh surface and washed back to reveal it, is a specialty finish few crews still do well, and we quote it per project. It lives or dies on the base underneath, the timing of the exposure wash, and keeping the wash water off everything around it.',
+    bullets: ['Compacted base on every pour', '#3 or #4 rebar on chairs, mid-slab', 'Broom, sand, top-cast or seeded exposed aggregate', 'Saw-cut control joints'],
   },
   {
     title: 'Retaining walls',
@@ -54,11 +54,11 @@ const steps = [
 const faqs = [
   {
     q: 'What does a paver patio cost?',
-    a: 'Paver installation starts around $15 per square foot and most patios land between $15 and $22 depending on the paver, the pattern, access, and how much demo and grading the site needs. A typical 300 to 400 sq ft backyard patio runs $6,000 to $9,000. Driveways are priced a little higher for the thicker base. You get a fixed price in writing before we start.',
+    a: 'Paver installation starts at $18 per square foot with materials included, and most patios land between $18 and $25 depending on the paver, the pattern, access, and how much demo and grading the site needs. A typical 300 to 400 sq ft backyard patio runs $6,500 to $10,000. Driveways are priced a little higher for the thicker base. You get a fixed price in writing before we start.',
   },
   {
-    q: 'What does exposed-aggregate concrete cost?',
-    a: 'From $25 per square foot including demolition and haul-off, base, steel, the seeded stone finish and sealer. That rate assumes a project of about 1,000 square feet or more; smaller pours cost more per foot because the setup, finishing crew and dump runs do not shrink with the slab.',
+    q: 'What does concrete cost?',
+    a: 'Concrete starts at $15 per square foot for standard finishes, including base and steel. Decorative finishes like seeded exposed aggregate are quoted per project, because the stone, the demolition and the finishing crew change with the site. Smaller pours cost more per foot because the setup, finishing crew and dump runs do not shrink with the slab.',
   },
   {
     q: 'Pavers or concrete?',
@@ -119,20 +119,20 @@ export default function HardscapePage() {
           <div>
             <p className="text-xs tracking-widest uppercase text-orange-light mb-2">Pavers</p>
             <div className="flex items-baseline gap-2">
+              <span className="font-serif text-white text-5xl">from $18</span>
+              <span className="text-white/50 text-sm">/ sq ft, materials included</span>
+            </div>
+          </div>
+          <div>
+            <p className="text-xs tracking-widest uppercase text-orange-light mb-2">Concrete</p>
+            <div className="flex items-baseline gap-2">
               <span className="font-serif text-white text-5xl">from $15</span>
               <span className="text-white/50 text-sm">/ sq ft</span>
             </div>
           </div>
-          <div>
-            <p className="text-xs tracking-widest uppercase text-orange-light mb-2">Exposed-aggregate concrete</p>
-            <div className="flex items-baseline gap-2">
-              <span className="font-serif text-white text-5xl">from $25</span>
-              <span className="text-white/50 text-sm">/ sq ft</span>
-            </div>
-          </div>
           <p className="text-white/70 leading-relaxed">
-            Fixed price in writing after a site visit. Includes demo and haul-off, base, steel and finish. Minimum project
-            sizes apply; final pricing depends on access, existing conditions and complexity.
+            Fixed price in writing after a site visit. Minimum project sizes apply; final pricing depends on access,
+            demolition, existing conditions and complexity. Exposed aggregate is quoted per project.
           </p>
         </div>
       </section>

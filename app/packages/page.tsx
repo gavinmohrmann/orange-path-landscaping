@@ -35,45 +35,24 @@ const processSteps = [
 const constructionServices = [
   {
     name: 'Artificial Turf',
-    rate: '$9.50',
+    rate: 'from $9.25',
     unit: 'per sq ft',
     description: 'Professional installation of artificial turf including base prep, compaction, and infill. No mowing, no watering — just a clean lawn year-round.',
     notes: 'Material cost included in rate.',
   },
   {
-    name: 'Sod Installation',
-    rate: '$7.00',
-    unit: 'per sq ft',
-    description: 'Fresh sod installed over prepared soil — graded, rolled, and ready to take root. Best for homeowners who want a real lawn fast.',
-    notes: 'Material cost included in rate.',
-  },
-  {
     name: 'Paver Installation',
-    rate: '$18.00',
+    rate: 'from $18',
     unit: 'per sq ft',
     description: 'Full paver installation including excavation, compacted gravel base, sand bed, laying, and joint sand. Driveways, patios, walkways, and pool decks.',
-    notes: 'Includes a $3/sq ft paver allowance; upgraded pavers priced on request.',
+    notes: 'Materials included, with a $3/sq ft paver allowance; upgraded pavers priced on request.',
   },
   {
-    name: 'Concrete — Sand Finish',
-    rate: '$13.50',
+    name: 'Concrete',
+    rate: 'from $15',
     unit: 'per sq ft',
-    description: 'Standard broom or sand finish concrete. Clean, durable, and cost-effective for driveways, walkways, and utility slabs.',
-    notes: 'Material and labor included.',
-  },
-  {
-    name: 'Concrete — Top Cast',
-    rate: '$15.50',
-    unit: 'per sq ft',
-    description: 'A surface retarder is applied to the fresh pour and washed off to expose the aggregate already in the concrete mix. Textured and refined, at a cost-effective price point. Popular for patios and front entries.',
-    notes: 'Material and labor included.',
-  },
-  {
-    name: 'Concrete — Seeded Exposed Aggregate',
-    rate: '$25.00',
-    unit: 'per sq ft',
-    description: 'Decorative stone is broadcast onto the fresh surface, pressed in, and exposure-washed to reveal it — so you choose the stone and control the color and texture. Includes demolition and haul-off, compacted base, steel reinforcement, and a two-coat penetrating sealer. A specialty finish few crews still do well.',
-    notes: 'Minimum project size applies. Small areas price higher per sq ft.',
+    description: 'Poured concrete patios, walkways, driveways and slabs on a compacted base with steel. Broom, sand or top-cast finish. Clean, durable, and cost-effective.',
+    notes: 'Seeded exposed aggregate is a specialty finish, quoted per project.',
   },
 ]
 
