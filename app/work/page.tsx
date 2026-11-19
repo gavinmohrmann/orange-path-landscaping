@@ -4,7 +4,7 @@ import Lightbox from '@/components/Lightbox'
 
 export const metadata: Metadata = {
   title: 'Portfolio | Landscape Projects — Orange Path Landscaping, Orange County CA',
-  description: 'Browse completed landscape projects by Orange Path Landscaping across Orange County — paver patios, retaining walls, xeriscape front yards, decks, and custom outdoor living spaces.',
+  description: 'Browse completed landscape projects by Orange Path Landscaping across Orange County — paver patios, exposed-aggregate concrete, retaining walls, xeriscape front yards, decks, and custom outdoor living spaces.',
   openGraph: {
     title: 'Landscape Portfolio — Orange Path Landscaping | Orange County, CA',
     description: 'Completed projects: paver patios, retaining walls, xeriscape, decks, and outdoor living spaces across Orange County.',
@@ -13,6 +13,29 @@ export const metadata: Metadata = {
 }
 
 const projects = [
+  {
+    id: 16,
+    title: 'Exposed Aggregate Concrete at Capo Leisure House',
+    location: 'River Street Marketplace, San Juan Capistrano, CA',
+    category: 'Completed Build — Decorative Concrete',
+    description: 'A worn paver frontage outside Capo Leisure House, replaced with a 5-inch seeded exposed-aggregate slab. We cut the existing pavers back to a clean stepped edge, hauled off the old field, compacted the base and set steel. The slab was poured in a single day, then decorative stone was broadcast by hand, pressed in, and washed back to expose it. Control joints were saw-cut afterward, and the new concrete meets the surrounding pavers flush. Open the photo to see it from base prep to finished surface.',
+    images: [
+      '/images/projects/capo-leisure-concrete-1-finished.jpg',
+      '/images/projects/capo-leisure-concrete-2-finished-detail.jpg',
+      '/images/projects/capo-leisure-concrete-3-base-steel.jpg',
+      '/images/projects/capo-leisure-concrete-4-pour.jpg',
+      '/images/projects/capo-leisure-concrete-5-exposing.jpg',
+    ],
+    alts: [
+      'Finished seeded exposed-aggregate concrete outside Capo Leisure House, River Street Marketplace, San Juan Capistrano CA',
+      'Exposed-aggregate concrete meeting the existing pavers along the planting bed, San Juan Capistrano CA',
+      'Before the pour: pavers cut back to a stepped edge, base compacted and steel set, San Juan Capistrano CA',
+      'Pour day: crew placing and screeding the concrete slab, San Juan Capistrano CA',
+      'Exposing the stone: washing back the surface after the decorative aggregate was seeded, San Juan Capistrano CA',
+    ],
+    featured: true,
+    gallery: true,
+  },
   {
     id: 13,
     title: 'River Street Marketplace',
@@ -179,13 +202,24 @@ export default function WorkPage() {
           <div className="space-y-24">
             {featured.map((project, i) => (
               <div key={project.id} className={`grid md:grid-cols-2 gap-8 items-center ${i % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
-                <div className={`grid gap-3 ${project.images.length > 1 ? 'grid-cols-2' : 'grid-cols-1'}`}>
-                  {project.images.map((img, j) => (
-                    <div key={j} className="relative overflow-hidden aspect-[3/4]">
-                      <Lightbox src={img} alt={(project.alts ?? [])[j] ?? project.title} sizes="(max-width: 768px) 50vw, 25vw" />
-                    </div>
-                  ))}
-                </div>
+                {'gallery' in project && project.gallery ? (
+                  <div className="relative overflow-hidden aspect-[4/5]">
+                    <Lightbox
+                      src={project.images[0]}
+                      alt={(project.alts ?? [])[0] ?? project.title}
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      gallery={project.images.map((img, j) => ({ src: img, alt: (project.alts ?? [])[j] ?? project.title }))}
+                    />
+                  </div>
+                ) : (
+                  <div className={`grid gap-3 ${project.images.length > 1 ? 'grid-cols-2' : 'grid-cols-1'}`}>
+                    {project.images.map((img, j) => (
+                      <div key={j} className="relative overflow-hidden aspect-[3/4]">
+                        <Lightbox src={img} alt={(project.alts ?? [])[j] ?? project.title} sizes="(max-width: 768px) 50vw, 25vw" />
+                      </div>
+                    ))}
+                  </div>
+                )}
                 <div className={i % 2 === 1 ? 'md:order-first' : ''}>
                   <p className="section-label mb-3">{project.category}</p>
                   <h2 className="font-serif text-green-900 text-3xl md:text-4xl mb-2">{project.title}</h2>
