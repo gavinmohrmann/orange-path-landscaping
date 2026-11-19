@@ -33,7 +33,7 @@ export default function Footer() {
                 { href: '/services', label: 'Services' },
                 { href: '/hardscape', label: 'Hardscape' },
                 { href: '/maintenance', label: 'Maintenance' },
-                { href: '/packages', label: 'Packages' },
+                { href: '/packages', label: 'Design & Pricing' },
                 { href: '/blog', label: 'Field Notes' },
                 { href: '/about', label: 'About' },
                 { href: '/contact', label: 'Contact' },

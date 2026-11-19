@@ -1,71 +1,25 @@
 import Link from 'next/link'
 
-const packages = [
-  {
-    name: 'Classic',
-    price: '$2,195',
-    description: 'A guided design experience with photorealistic renders and a dedicated project manager to bring your vision to life.',
-    scope: 'Backyard & side yards',
-    highlight: true,
-    badge: 'Most Popular',
-    includes: [
-      '2D CAD Landscape Plan',
-      'Plant, hardscape & amenities design',
-      'Curated plant list & material list',
-      'In-person site consultation & kick-off call',
-      'Photorealistic 3D renders (day)',
-      '1 revision round',
-      'Dedicated project manager',
-    ],
-    notIncluded: [
-      'Night render & lighting plan',
-      'Cost advisor',
-    ],
-  },
-  {
-    name: 'Premium',
-    price: '$3,695',
-    description: 'Full-property design including exterior architecture — paint, windows, doors — with a master designer and check-in calls throughout.',
-    scope: 'Entire property',
-    highlight: false,
-    includes: [
-      'Custom 2D landscape CAD plans',
-      'Plant, hardscape & amenities design',
-      'Curated plant & materials list',
-      'In-person site consultation & kick-off call',
-      'Photorealistic 3D renders (day & night)',
-      'Night render & lighting plan',
-      'Exterior design (paint, windows, doors)',
-      '1 revision round',
-      'Master designer',
-      'Dedicated project manager',
-      'Check-in design calls',
-      'Cost advisor',
-    ],
-    notIncluded: [],
-  },
-]
-
 const faqs = [
   {
     q: 'What makes Orange Path different from online design services?',
-    a: 'Every consultation is in-person. We walk your property, understand how you live in your space, and design with the actual light, soil, and microclimate of your yard in mind — not a satellite photo.',
+    a: 'Every project starts in person. We walk your property, understand how you live in your space, and design with the actual light, soil, and microclimate of your yard in mind, not a satellite photo.',
   },
   {
-    q: 'What does the in-person consultation include?',
-    a: 'We visit your property, measure the space, photograph existing conditions, and have a focused conversation about your goals, timeline, and budget. This is included in every package.',
+    q: 'What does the site walk include?',
+    a: 'We visit your property, measure the space, photograph existing conditions, and have a focused conversation about your goals, timeline, and budget. There is no charge for it.',
   },
   {
-    q: 'Do you also build what you design?',
-    a: 'Yes, and most of our clients go that route. If you build with us there is no design fee: we draw the concept, present it in person, and the full plan set comes with your construction contract. The packages on this page are for homeowners who want to own a plan set outright.',
+    q: 'What does the design cost?',
+    a: 'Nothing. We draw the concept, present it to you in person along with a price to build it, and the full plan set comes with your construction contract. The design is free because we are the ones who build it.',
   },
   {
     q: 'How long does the design process take?',
-    a: 'Most designs are delivered within 2–4 weeks of the site consultation. Premium projects may take 4–6 weeks.',
+    a: 'Most concepts are presented within 2 to 4 weeks of the site walk. Larger properties may take 4 to 6 weeks.',
   },
   {
-    q: 'Can I use the design plans with my own contractor?',
-    a: 'Absolutely. Your plans are yours to use however you like — with us, with another contractor, or as a phased roadmap you build over time.',
+    q: 'Can I buy the design and use my own contractor?',
+    a: 'We no longer sell designs separately. Our concepts are drawn for our own crew to build, so the plans stay with Orange Path until there is a construction contract. If you decide not to move forward, you owe nothing.',
   },
 ]
 
@@ -120,10 +74,10 @@ export default function PackagesPage() {
       {/* Header */}
       <section className="bg-green-900 pt-40 pb-20">
         <div className="max-w-7xl mx-auto px-6">
-          <p className="section-label text-orange-light mb-4">Design Services</p>
-          <h1 className="font-serif text-white text-5xl md:text-7xl font-normal">Packages</h1>
+          <p className="section-label text-orange-light mb-4">Design &amp; Build</p>
+          <h1 className="font-serif text-white text-5xl md:text-7xl font-normal">Design &amp; Pricing</h1>
           <p className="text-white/55 mt-6 text-lg max-w-xl leading-relaxed">
-            Professional landscape design delivered with an in-person consultation — so your plan fits your property, your lifestyle, and your budget.
+            The design concept is on us when we build it. It starts with an in-person site walk, so the plan fits your property, your lifestyle, and your budget.
           </p>
         </div>
       </section>
@@ -131,9 +85,9 @@ export default function PackagesPage() {
       {/* Differentiator bar */}
       <section className="bg-orange-brand py-5">
         <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-10 text-white text-sm tracking-wide text-center">
-          <span className="font-medium">✓ Every package includes an in-person site visit</span>
+          <span className="font-medium">✓ Every project starts with an in-person site walk</span>
           <span className="hidden sm:block text-white/40">|</span>
-          <span className="font-medium">✓ All designs delivered as full CAD plans</span>
+          <span className="font-medium">✓ Design concept at no charge</span>
           <span className="hidden sm:block text-white/40">|</span>
           <span className="font-medium">✓ Orange County, CA — locally owned & operated</span>
         </div>
@@ -150,7 +104,7 @@ export default function PackagesPage() {
               If you build with us, there&apos;s no design fee; the full plan set comes with your construction contract.
             </p>
             <p className="text-stone-500 leading-relaxed">
-              If you&apos;d rather own the drawings outright, the design packages below are yours to keep.
+              The design is free because we&apos;re the ones who build it. If you decide not to move forward, you owe nothing.
             </p>
           </div>
           <div className="md:col-span-2 bg-green-900 p-8">
@@ -164,88 +118,6 @@ export default function PackagesPage() {
               Book a Site Walk
             </a>
           </div>
-        </div>
-      </section>
-
-      {/* Packages grid */}
-      <section className="bg-cream py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-6">
-          <p className="section-label mb-4">Design Packages</p>
-          <h2 className="font-serif text-green-900 text-4xl md:text-5xl mb-3">Plans you own</h2>
-          <p className="text-stone-500 max-w-xl leading-relaxed mb-10">For homeowners who want a complete plan set to keep, whether or not we build it.</p>
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl">
-            {packages.map((pkg) => (
-              <div
-                key={pkg.name}
-                className={`relative flex flex-col ${
-                  pkg.highlight
-                    ? 'bg-green-900 text-white ring-2 ring-orange-brand'
-                    : 'bg-white text-stone-800'
-                }`}
-              >
-                {pkg.badge && (
-                  <div className="absolute -top-3 left-6">
-                    <span className="bg-orange-brand text-white text-xs tracking-widest uppercase px-3 py-1">
-                      {pkg.badge}
-                    </span>
-                  </div>
-                )}
-
-                <div className="p-8 border-b border-current/10">
-                  <p className={`text-xs tracking-widest uppercase mb-2 ${pkg.highlight ? 'text-orange-light' : 'text-orange-brand'}`}>
-                    {pkg.name}
-                  </p>
-                  <p className={`font-serif text-4xl mb-1 ${pkg.highlight ? 'text-white' : 'text-green-900'}`}>
-                    {pkg.price}
-                  </p>
-                  <p className={`text-xs mb-4 ${pkg.highlight ? 'text-white/50' : 'text-stone-400'}`}>
-                    {pkg.scope}
-                  </p>
-                  <p className={`text-sm leading-relaxed ${pkg.highlight ? 'text-white/70' : 'text-stone-500'}`}>
-                    {pkg.description}
-                  </p>
-                </div>
-
-                <div className="p-8 flex flex-col flex-1">
-                  <ul className="space-y-3 mb-6 flex-1">
-                    {pkg.includes.map((item) => (
-                      <li key={item} className="flex items-start gap-3 text-sm">
-                        <span className={`mt-0.5 shrink-0 ${pkg.highlight ? 'text-orange-light' : 'text-green-700'}`}>✓</span>
-                        <span className={pkg.highlight ? 'text-white/80' : 'text-stone-600'}>{item}</span>
-                      </li>
-                    ))}
-                    {pkg.notIncluded.map((item) => (
-                      <li key={item} className="flex items-start gap-3 text-sm">
-                        <span className="mt-0.5 shrink-0 text-stone-300">—</span>
-                        <span className={pkg.highlight ? 'text-white/30' : 'text-stone-300'}>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <a
-                    href="https://calendly.com/gavin-orangepathlandscaping/30min"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`block text-center py-3 px-6 text-sm tracking-widest uppercase font-medium transition-colors ${
-                      pkg.highlight
-                        ? 'bg-orange-brand text-white hover:bg-orange-light'
-                        : 'border border-green-900 text-green-900 hover:bg-green-900 hover:text-white'
-                    }`}
-                  >
-                    Book a Consultation
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <p className="text-center text-stone-400 text-sm mt-10">
-            Not sure which package is right for you?{' '}
-            <a href="https://calendly.com/gavin-orangepathlandscaping/30min" target="_blank" rel="noopener noreferrer" className="text-green-900 underline underline-offset-2 hover:text-orange-brand transition-colors">
-              Book a free 30-minute call
-            </a>{' '}
-            and we'll help you figure it out.
-          </p>
         </div>
       </section>
 
@@ -332,9 +204,9 @@ export default function PackagesPage() {
       {/* CTA */}
       <section className="bg-green-900 py-20 text-center">
         <div className="max-w-2xl mx-auto px-6">
-          <h2 className="font-serif text-white text-4xl mb-4">Ready to Start Your Design?</h2>
+          <h2 className="font-serif text-white text-4xl mb-4">Ready to See Your Yard on Paper?</h2>
           <p className="text-white/55 mb-8 leading-relaxed">
-            Book a free 30-minute consultation and we'll walk you through the right package for your project.
+            Book a free 30-minute call and we'll set up a site walk. The design concept is on us.
           </p>
           <a
             href="https://calendly.com/gavin-orangepathlandscaping/30min"

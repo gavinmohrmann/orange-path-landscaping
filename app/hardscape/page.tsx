@@ -89,7 +89,7 @@ export default function HardscapePage() {
               Paver patios, walkways and driveways. Exposed-aggregate concrete. Retaining walls and steps. Built by one crew
               with the owner on site and backed by a 10-year workmanship warranty. Don&apos;t have a layout yet? Most people
               don&apos;t. We draw the plan, walk it with you, and when you build with us the design is included (see{' '}
-              <Link href="/packages" className="text-green-900 underline">design packages</Link>).
+              <Link href="/packages" className="text-green-900 underline">how it works</Link>).
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a href="tel:9493716356" className="btn-primary">Call or Text (949) 371-6356</a>
@@ -248,7 +248,7 @@ export default function HardscapePage() {
             <a href="tel:9493716356" className="font-serif text-green-900 text-3xl hover:text-orange-brand transition-colors">(949) 371-6356</a>
             <p className="text-stone-400 text-sm mt-2">Call or text · Mon–Sat 7am–6pm</p>
             <p className="text-stone-400 text-sm mt-8">
-              Want the planting and irrigation designed with it? See our <Link href="/packages" className="text-green-900 underline">design &amp; build packages</Link>.
+              Want the planting and irrigation designed with it? See <Link href="/packages" className="text-green-900 underline">how our design-build process works</Link>.
             </p>
           </div>
           <div>

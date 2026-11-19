@@ -280,7 +280,7 @@ export default function MaintenancePage() {
             <a href="tel:9493716356" className="font-serif text-green-900 text-3xl hover:text-orange-brand transition-colors">(949) 371-6356</a>
             <p className="text-stone-400 text-sm mt-2">Call or text · Mon–Sat 7am–6pm</p>
             <p className="text-stone-400 text-sm mt-8">
-              Looking for a full redesign instead? See our <Link href="/packages" className="text-green-900 underline">design &amp; build packages</Link>.
+              Looking for a full redesign instead? See <Link href="/packages" className="text-green-900 underline">how our design-build process works</Link>.
             </p>
           </div>
           <div>
