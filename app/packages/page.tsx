@@ -23,6 +23,15 @@ const faqs = [
   },
 ]
 
+const processSteps = [
+  { n: '1', title: 'Meet at your property', body: 'Gavin walks the yard with you: what you like, what you want gone, and how you use the space.', free: true },
+  { n: '2', title: 'Budget conversation', body: 'We agree on a realistic budget range up front, so the design is drawn to a number that works for you.', free: true },
+  { n: '3', title: 'Design concept and presentation', body: 'We draw the concept, a rendered view and a plan, and present it to you in person.', free: true },
+  { n: '4', title: 'Price agreement', body: 'You get a fixed price to build what you saw. We adjust scope together until the price and the plan both fit.', free: false },
+  { n: '5', title: 'Contract', body: 'A written contract with the scope, price, payment schedule and start date. The full plan set comes with it.', free: false },
+  { n: '6', title: 'Build', body: 'One crew, with the owner on site, from demolition to the final walkthrough.', free: false },
+]
+
 const constructionServices = [
   {
     name: 'Artificial Turf',
@@ -112,11 +121,60 @@ export default function PackagesPage() {
             <ol className="space-y-3 text-white/85 text-sm leading-relaxed list-decimal list-inside">
               <li>Site walk and budget conversation</li>
               <li>We draw the concept and present it to you</li>
-              <li>Build contract: plan set delivered, no design fee</li>
+              <li>Like it? We agree on a price, sign a contract and build it</li>
             </ol>
             <a href="/contact" className="mt-7 block text-center py-3 px-6 text-sm tracking-widest uppercase font-medium bg-orange-brand text-white hover:bg-orange-light transition-colors">
               Book a Site Walk
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Process flow */}
+      <section className="bg-cream py-20 md:py-28">
+        <div className="max-w-7xl mx-auto px-6">
+          <p className="section-label mb-4">The Process</p>
+          <h2 className="font-serif text-green-900 text-4xl md:text-5xl mb-4">From first meeting to finished yard</h2>
+          <p className="text-stone-500 max-w-2xl leading-relaxed mb-12">
+            Six steps. The first three cost you nothing, and you can stop after the design presentation if it isn&apos;t right.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {processSteps.slice(0, 3).map((step) => (
+              <div key={step.n} className="bg-white p-8 border-t-4 border-orange-brand">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="font-serif text-green-900 text-4xl">{step.n}</span>
+                  <span className="text-xs tracking-widest uppercase text-orange-brand">No charge</span>
+                </div>
+                <h3 className="font-serif text-green-900 text-xl mb-3">{step.title}</h3>
+                <p className="text-stone-500 text-sm leading-relaxed">{step.body}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="bg-green-900 text-white p-8 my-6">
+            <p className="text-xs tracking-widest uppercase text-orange-light mb-2">Your decision point</p>
+            <p className="font-serif text-2xl md:text-3xl mb-2">Don&apos;t love the concept? Walk away. You owe nothing.</p>
+            <p className="text-white/70 text-sm leading-relaxed max-w-3xl">
+              There is no design fee and no obligation after the presentation. The design is free because we&apos;re the ones who build it, so the plans stay with Orange Path unless you move forward.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {processSteps.slice(3).map((step) => (
+              <div key={step.n} className="bg-white p-8 border-t-4 border-green-900">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="font-serif text-green-900 text-4xl">{step.n}</span>
+                  <span className="text-xs tracking-widest uppercase text-stone-400">If you go ahead</span>
+                </div>
+                <h3 className="font-serif text-green-900 text-xl mb-3">{step.title}</h3>
+                <p className="text-stone-500 text-sm leading-relaxed">{step.body}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-10">
+            <a href="/contact" className="btn-primary">Book a Site Walk</a>
           </div>
         </div>
       </section>
