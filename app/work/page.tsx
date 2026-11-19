@@ -18,7 +18,7 @@ const projects = [
     title: 'Exposed Aggregate Concrete at Capo Leisure House',
     location: 'River Street Marketplace, San Juan Capistrano, CA',
     category: 'Completed Build — Decorative Concrete',
-    description: 'A worn paver frontage outside Capo Leisure House, replaced with a 5-inch seeded exposed-aggregate slab. We cut the existing pavers back to a clean stepped edge, hauled off the old field, compacted the base and set steel. The slab was poured in a single day, then decorative stone was broadcast by hand, pressed in, and washed back to expose it. Control joints were saw-cut afterward, and the new concrete meets the surrounding pavers flush. Open the photo to see it from base prep to finished surface.',
+    description: 'A loose-pebble area outside Capo Leisure House, replaced with a 5-inch seeded exposed-aggregate slab. We removed the old pebble, compacted the base and set steel, working to the stepped edge of the surrounding pavers. The slab was poured in a single day, then decorative stone was broadcast by hand, pressed in, and washed back to expose it. Control joints were saw-cut afterward, and the new concrete meets the surrounding pavers flush. Open the photo to see it from base prep to finished surface.',
     images: [
       '/images/projects/capo-leisure-concrete-1-finished.jpg',
       '/images/projects/capo-leisure-concrete-2-finished-detail.jpg',
@@ -29,7 +29,7 @@ const projects = [
     alts: [
       'Finished seeded exposed-aggregate concrete outside Capo Leisure House, River Street Marketplace, San Juan Capistrano CA',
       'Exposed-aggregate concrete meeting the existing pavers along the planting bed, San Juan Capistrano CA',
-      'Before the pour: pavers cut back to a stepped edge, base compacted and steel set, San Juan Capistrano CA',
+      'Before the pour: loose pebble removed, base compacted and steel set against the stepped paver edge, San Juan Capistrano CA',
       'Pour day: crew placing and screeding the concrete slab, San Juan Capistrano CA',
       'Exposing the stone: washing back the surface after the decorative aggregate was seeded, San Juan Capistrano CA',
     ],
