@@ -79,7 +79,7 @@ export default function Lightbox({ src, alt, className = '', sizes, gallery }: P
             type="button"
             onClick={close}
             aria-label="Close"
-            className="absolute top-5 right-6 z-10 text-white/70 hover:text-white text-3xl leading-none font-light"
+            className="absolute top-3 right-3 z-20 w-12 h-12 flex items-center justify-center rounded-full bg-white/15 hover:bg-white/30 text-white text-3xl leading-none font-light cursor-pointer"
           >
             ×
           </button>
@@ -113,14 +113,17 @@ export default function Lightbox({ src, alt, className = '', sizes, gallery }: P
 
           <div
             onClick={(e) => {
-              e.stopPropagation()
-              if (many) next()
+              // One photo: tapping it closes. Several: tapping steps to the next one.
+              if (many) {
+                e.stopPropagation()
+                next()
+              }
             }}
-            className={`relative w-full h-full max-w-5xl ${many ? 'cursor-pointer' : 'cursor-default'}`}
+            className={`relative w-full h-full max-w-5xl ${many ? 'cursor-pointer' : 'cursor-zoom-out'}`}
           >
             <Image key={current.src} src={current.src} alt={current.alt} fill sizes="100vw" className="object-contain" />
           </div>
-          <p className="absolute bottom-5 left-0 right-0 text-center text-white/60 text-xs tracking-wide px-6">
+          <p className="absolute bottom-5 left-0 right-0 z-10 pointer-events-none text-center text-white/60 text-xs tracking-wide px-6">
             {many ? `${index + 1} / ${slides.length} · ` : ''}
             {current.alt}
           </p>

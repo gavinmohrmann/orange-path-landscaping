@@ -242,7 +242,7 @@ export default function WorkPage() {
                 {project.images.length > 0 ? (
                   <div className="relative aspect-[4/3] overflow-hidden project-card">
                     <Lightbox src={project.images[0]} alt={project.alts?.[0] ?? project.title} sizes="(max-width: 768px) 100vw, 33vw" />
-                    <div className="project-overlay absolute inset-0 bg-green-950/60 flex items-end p-5">
+                    <div className="project-overlay pointer-events-none absolute inset-0 bg-green-950/60 flex items-end p-5">
                       <p className="text-white font-serif text-lg">{project.title}</p>
                     </div>
                   </div>
