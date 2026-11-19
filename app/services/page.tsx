@@ -163,7 +163,7 @@ export default function ServicesPage() {
       <section className="py-24 text-center bg-white">
         <div className="max-w-2xl mx-auto px-6">
           <h2 className="font-serif text-green-900 text-4xl mb-4">Ready to Get Started?</h2>
-          <p className="text-stone-500 mb-8 leading-relaxed">Free consultations for all Design & Build projects. We&apos;re Orange County local and ready to see your space.</p>
+          <p className="text-stone-500 mb-8 leading-relaxed">Free phone consultations for all Design & Build projects. We&apos;re Orange County local, and if it&apos;s a fit we&apos;ll come see your space.</p>
           <Link href="/contact" className="btn-primary">Schedule a Consultation</Link>
         </div>
       </section>
