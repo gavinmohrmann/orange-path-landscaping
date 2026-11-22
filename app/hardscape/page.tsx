@@ -253,7 +253,7 @@ export default function HardscapePage() {
             </p>
           </div>
           <div>
-            <QuoteForm subject="New HARDSCAPE lead — website /hardscape" service="Hardscape" footnote="Free phone consultation. Fixed price in writing. We respond within one business day." buttonLabel="Request a Phone Consultation" thanks="Gavin will call or text you within one business day to talk through your project." />
+            <QuoteForm subject="New HARDSCAPE lead — website /hardscape" service="Hardscape" footnote="Free phone consultation. Fixed price in writing. We respond within one business day." buttonLabel="Request a Phone Consultation" thanks="Gavin will call or text you within one business day to talk through your project." locationHint="So we can confirm you're in our service area" messageLabel="Tell us about the project" messageHint="Patio, driveway, walkway or wall? Rough size, pavers or concrete, timeline and budget range..." />
           </div>
         </div>
       </section>

@@ -5,7 +5,7 @@ import { reportConversion, CONV_FORM } from '@/components/GoogleTag'
 
 // Short lead form used on landing pages (maintenance, hardscape). Posts to the same
 // FormSubmit inbox as the contact page and fires the Google Ads conversion.
-export default function QuoteForm({ subject = 'New website lead — Orange Path', service = '', footnote = 'No contracts. Month to month. We respond within one business day.', buttonLabel = 'Request a Quote', thanks = 'Gavin will call or text you within one business day to set up a quick site walk.' }: { subject?: string; service?: string; footnote?: string; buttonLabel?: string; thanks?: string }) {
+export default function QuoteForm({ subject = 'New website lead — Orange Path', service = '', footnote = 'No contracts. Month to month. We respond within one business day.', buttonLabel = 'Request a Quote', thanks = 'Gavin will call or text you within one business day to set up a quick site walk.', locationHint = "So we can confirm you're in our route area", messageLabel = 'Anything we should know?', messageHint = "Lot size, current gardener, what's bugging you about the yard..." }: { subject?: string; service?: string; footnote?: string; buttonLabel?: string; thanks?: string; locationHint?: string; messageLabel?: string; messageHint?: string }) {
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState(false)
   const [sending, setSending] = useState(false)
@@ -70,11 +70,11 @@ export default function QuoteForm({ subject = 'New website lead — Orange Path'
       </div>
       <div>
         <label className={label}>Street address or neighborhood</label>
-        <input name="location" type="text" required className={input} placeholder="So we can confirm you're in our route area" />
+        <input name="location" type="text" required className={input} placeholder={locationHint} />
       </div>
       <div>
-        <label className={label}>Anything we should know?</label>
-        <textarea name="message" rows={3} className={`${input} resize-none`} placeholder="Lot size, current gardener, what's bugging you about the yard..." />
+        <label className={label}>{messageLabel}</label>
+        <textarea name="message" rows={3} className={`${input} resize-none`} placeholder={messageHint} />
       </div>
       <button type="submit" disabled={sending} className="btn-primary w-full text-center disabled:opacity-60">
         {sending ? 'Sending…' : buttonLabel}
