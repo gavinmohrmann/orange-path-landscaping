@@ -70,7 +70,7 @@ const faqs = [
   },
   {
     q: 'Who does the work?',
-    a: 'Our own crew, with Gavin on site. For exposed-aggregate pours we bring in a dedicated concrete finishing crew we have worked with for years; everything else is in-house. Licensed C-27 #1146854, general liability and workers’ comp.',
+    a: 'Our in-house crew, with Gavin on site. Depending on the scope, we bring in specialty subcontractors for parts of the work, and Gavin manages them the same way. Licensed C-27 #1146854, general liability and workers’ comp.',
   },
 ]
 
