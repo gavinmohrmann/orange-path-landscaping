@@ -29,7 +29,7 @@ const processSteps = [
   { n: '3', title: 'Design concept and presentation', body: 'We draw the concept, a rendered view and a plan, and present it to you in person.', free: true },
   { n: '4', title: 'Price agreement', body: 'You get a fixed price to build what you saw. We adjust scope together until the price and the plan both fit.', free: false },
   { n: '5', title: 'Contract', body: 'A written contract with the scope, price, payment schedule and start date. The full plan set comes with it.', free: false },
-  { n: '6', title: 'Build', body: 'One crew, with the owner on site, from demolition to the final walkthrough.', free: false },
+  { n: '6', title: 'Build', body: 'One point of contact, with the owner on site, from demolition to the final walkthrough.', free: false },
 ]
 
 const constructionServices = [

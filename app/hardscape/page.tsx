@@ -47,7 +47,7 @@ const projects = [
 const steps = [
   { n: '01', t: 'Phone call, then site walk', d: 'A free phone consultation about what you want and your budget. If it is a fit, Gavin walks the space with you, measures, checks grade and drainage, and talks through materials.' },
   { n: '02', t: 'Firm proposal', d: 'A written scope and a fixed price, not an estimate. Marked plan of the work area so there is no argument later about what was included.' },
-  { n: '03', t: 'Build', d: 'Demo, base, steel, pour or set, finish. One crew start to finish; Gavin on site. Most patios and driveways run one to two weeks including cure.' },
+  { n: '03', t: 'Build', d: 'Demo, base, steel, pour or set, finish. One point of contact start to finish, with Gavin on site. Most patios and driveways run one to two weeks including cure.' },
   { n: '04', t: 'Warranty', d: '10-year workmanship warranty on paver and wall installation. If a paver settles or an edge moves, we fix it.' },
 ]
 
@@ -86,7 +86,7 @@ export default function HardscapePage() {
               Pavers, concrete and retaining walls.
             </h1>
             <p className="text-stone-500 mt-6 text-lg max-w-xl leading-relaxed">
-              Paver patios, walkways and driveways. Exposed-aggregate concrete. Retaining walls and steps. Built by one crew
+              Paver patios, walkways and driveways. Exposed-aggregate concrete. Retaining walls and steps. Built
               with the owner on site and backed by a 10-year workmanship warranty. Don&apos;t have a layout yet? Most people
               don&apos;t. We draw the plan, walk it with you, and when you build with us the design is included (see{' '}
               <Link href="/packages" className="text-green-900 underline">how it works</Link>).
@@ -191,7 +191,7 @@ export default function HardscapePage() {
       <section className="bg-white py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-6">
           <p className="section-label mb-4">How it works</p>
-          <h2 className="font-serif text-green-900 text-4xl md:text-5xl mb-12">First call to warranty, one crew.</h2>
+          <h2 className="font-serif text-green-900 text-4xl md:text-5xl mb-12">First call to warranty, one point of contact.</h2>
           <div className="grid md:grid-cols-4 gap-8">
             {steps.map((s) => (
               <div key={s.n}>

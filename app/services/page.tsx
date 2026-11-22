@@ -134,7 +134,7 @@ export default function ServicesPage() {
             {[
               { step: '01', title: 'Phone Consultation', desc: 'A free call about what you want done, your timeline and your budget.' },
               { step: '02', title: 'Site Walk & Design', desc: 'We walk the property, then present a design concept and a price to build it. No charge if you stop here.' },
-              { step: '03', title: 'Build', desc: 'One crew, with the owner on site, builds what you approved.' },
+              { step: '03', title: 'Build', desc: 'We build what you approved, with the owner on site and one point of contact throughout.' },
               { step: '04', title: 'Care', desc: 'Ongoing maintenance keeps your landscape looking its best year-round.' },
             ].map((step) => (
               <div key={step.step} className="border-t border-white/20 pt-6">
