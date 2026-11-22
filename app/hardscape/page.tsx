@@ -45,7 +45,7 @@ const projects = [
 ]
 
 const steps = [
-  { n: '01', t: 'Site visit', d: 'Gavin walks the space with you, measures, checks grade and drainage, and talks through materials. Usually within a week.' },
+  { n: '01', t: 'Phone call, then site walk', d: 'A free phone consultation about what you want and your budget. If it is a fit, Gavin walks the space with you, measures, checks grade and drainage, and talks through materials.' },
   { n: '02', t: 'Firm proposal', d: 'A written scope and a fixed price, not an estimate. Marked plan of the work area so there is no argument later about what was included.' },
   { n: '03', t: 'Build', d: 'Demo, base, steel, pour or set, finish. One crew start to finish; Gavin on site. Most patios and driveways run one to two weeks including cure.' },
   { n: '04', t: 'Warranty', d: '10-year workmanship warranty on paver and wall installation. If a paver settles or an edge moves, we fix it.' },
@@ -94,7 +94,7 @@ export default function HardscapePage() {
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a href="tel:9493716356" className="btn-primary">Call or Text (949) 371-6356</a>
               <a href="#quote" className="inline-block px-8 py-4 border border-green-900 text-green-900 text-sm tracking-widest uppercase font-medium hover:bg-green-900 hover:text-white transition-colors">
-                Request a Site Visit
+                Request a Phone Consultation
               </a>
             </div>
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-xs tracking-widest uppercase text-stone-500">
@@ -131,7 +131,7 @@ export default function HardscapePage() {
             </div>
           </div>
           <p className="text-white/70 leading-relaxed">
-            Fixed price in writing after a site visit. Minimum project sizes apply; final pricing depends on access,
+            Fixed price in writing after a site walk. Minimum project sizes apply; final pricing depends on access,
             demolition, existing conditions and complexity. Exposed aggregate is quoted per project.
           </p>
         </div>
@@ -191,7 +191,7 @@ export default function HardscapePage() {
       <section className="bg-white py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-6">
           <p className="section-label mb-4">How it works</p>
-          <h2 className="font-serif text-green-900 text-4xl md:text-5xl mb-12">Site visit to warranty, one crew.</h2>
+          <h2 className="font-serif text-green-900 text-4xl md:text-5xl mb-12">First call to warranty, one crew.</h2>
           <div className="grid md:grid-cols-4 gap-8">
             {steps.map((s) => (
               <div key={s.n}>
@@ -240,10 +240,11 @@ export default function HardscapePage() {
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-start">
           <div>
             <p className="section-label mb-4">Start here</p>
-            <h2 className="font-serif text-green-900 text-4xl md:text-5xl mb-6">A site visit and a firm number.</h2>
+            <h2 className="font-serif text-green-900 text-4xl md:text-5xl mb-6">A phone call, a site walk and a firm number.</h2>
             <p className="text-stone-500 leading-relaxed mb-8">
-              Send the form or text Gavin a photo of the space. He will come out, measure, talk through materials, and send a
-              written proposal with a fixed price. Site visits are usually within a week.
+              Send the form or text Gavin a photo of the space. We start with a free phone consultation about what you want and
+              your budget. If it is a fit, Gavin comes out for a site walk, measures, talks through materials, and sends a
+              written proposal with a fixed price.
             </p>
             <a href="tel:9493716356" className="font-serif text-green-900 text-3xl hover:text-orange-brand transition-colors">(949) 371-6356</a>
             <p className="text-stone-400 text-sm mt-2">Call or text · Mon–Sat 7am–6pm</p>
@@ -252,7 +253,7 @@ export default function HardscapePage() {
             </p>
           </div>
           <div>
-            <QuoteForm subject="New HARDSCAPE lead — website /hardscape" service="Hardscape" footnote="Free site visit. Fixed price in writing. We respond within one business day." />
+            <QuoteForm subject="New HARDSCAPE lead — website /hardscape" service="Hardscape" footnote="Free phone consultation. Fixed price in writing. We respond within one business day." buttonLabel="Request a Phone Consultation" thanks="Gavin will call or text you within one business day to talk through your project." />
           </div>
         </div>
       </section>

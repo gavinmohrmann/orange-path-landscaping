@@ -57,7 +57,7 @@ const areas = ['San Juan Capistrano', 'Dana Point', 'San Clemente', 'Laguna Nigu
 const faqs = [
   {
     q: 'What does weekly service cost?',
-    a: 'Most homes in our route area run $300 to $450 a month for weekly service, depending on lot size, how much is planted versus hardscape, and slope. Your monthly price buys a set amount of crew time on site each visit; we give you a firm number after a 15-minute walk-through, and it stays fixed. Bi-weekly service is available at a lower monthly rate.',
+    a: 'Most homes in our route area run $300 to $450 a month for weekly service, depending on lot size, how much is planted versus hardscape, and slope. Your monthly price buys a set amount of crew time on site each visit; we give you a firm number after a 15-minute site walk, and it stays fixed. Bi-weekly service is available at a lower monthly rate.',
   },
   {
     q: 'Is there a contract?',
@@ -126,7 +126,7 @@ export default function MaintenancePage() {
             </div>
           </div>
           <p className="text-white/70 leading-relaxed md:col-span-2">
-            Firm monthly price after a 15-minute walk-through. No contract, invoiced monthly, cancel with 30 days&apos; notice.
+            Firm monthly price after a 15-minute site walk. No contract, invoiced monthly, cancel with 30 days&apos; notice.
             Bi-weekly service available. Most homes in our area land between $300 and $450 depending on lot size, planting and slope.
           </p>
         </div>

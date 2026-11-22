@@ -1,13 +1,12 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Landscaping Services | Orange County, CA — Orange Path Landscaping',
   description: 'Full-service landscaping in Orange County: design-build landscaping, retaining walls, paver hardscapes, concrete, artificial turf & sod, native & drought-tolerant plants, property care, and irrigation audits. Free phone consultations. LIC #1146854.',
   openGraph: {
     title: 'Landscaping Services — Orange Path Landscaping | Orange County, CA',
-    description: 'Landscape design, retaining walls, paver hardscapes, exposed-aggregate concrete, artificial turf, native plants, and property care across Orange County. Free consultations.',
+    description: 'Landscape design, retaining walls, paver hardscapes, exposed-aggregate concrete, artificial turf, native plants, and property care across Orange County. Free phone consultations.',
     url: 'https://orangepathlandscaping.com/services',
   },
 }
@@ -121,7 +120,7 @@ export default function ServicesPage() {
             ))}
           </div>
           <p className="text-stone-400 text-xs leading-relaxed max-w-2xl mt-10">
-            Final pricing depends on site access, existing conditions, prep work, and the complexity of the area. Minimum project sizes apply — small jobs carry the same setup and mobilization as large ones, so they price higher per square foot. Every project is quoted in writing after a site visit.
+            Final pricing depends on site access, existing conditions, prep work, and the complexity of the area. Minimum project sizes apply — small jobs carry the same setup and mobilization as large ones, so they price higher per square foot. Every project is quoted in writing after a site walk.
           </p>
         </div>
       </section>
@@ -152,8 +151,8 @@ export default function ServicesPage() {
       <section className="py-24 text-center bg-white">
         <div className="max-w-2xl mx-auto px-6">
           <h2 className="font-serif text-green-900 text-4xl mb-4">Ready to Get Started?</h2>
-          <p className="text-stone-500 mb-8 leading-relaxed">Free phone consultations for all Design & Build projects. We&apos;re Orange County local, and if it&apos;s a fit we&apos;ll come see your space.</p>
-          <Link href="/contact" className="btn-primary">Schedule a Phone Consultation</Link>
+          <p className="text-stone-500 mb-8 leading-relaxed">Free 30-minute phone consultation for all Design & Build projects. If it&apos;s a fit, we set up a site walk.</p>
+          <a href="https://calendly.com/gavin-orangepathlandscaping/30min" target="_blank" rel="noopener noreferrer" className="btn-primary">Book a Free Phone Consultation</a>
         </div>
       </section>
     </>

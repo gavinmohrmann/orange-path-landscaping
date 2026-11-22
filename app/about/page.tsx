@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'About | Veteran-Owned Landscaping — Orange Path Landscaping, Orange County CA',
@@ -114,7 +113,7 @@ export default function AboutPage() {
           <p className="text-stone-500 max-w-xl mx-auto mb-10 leading-relaxed">
             We serve all of Orange County including Laguna Niguel, Dana Point, San Clemente, Laguna Beach, Newport Beach, Irvine, Mission Viejo, and beyond.
           </p>
-          <Link href="/contact" className="btn-primary">Work with Us</Link>
+          <a href="https://calendly.com/gavin-orangepathlandscaping/30min" target="_blank" rel="noopener noreferrer" className="btn-primary">Book a Free Phone Consultation</a>
         </div>
       </section>
     </>

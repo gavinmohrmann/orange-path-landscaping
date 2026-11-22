@@ -164,7 +164,7 @@ export default function PackagesPage() {
           <p className="section-label mb-4">Construction Services</p>
           <h2 className="font-serif text-green-900 text-4xl md:text-5xl mb-4">Build Pricing</h2>
           <p className="text-stone-500 max-w-xl leading-relaxed mb-14">
-            Transparent, per-square-foot pricing on the installations we do most. Every project starts with a site visit to confirm scope before any numbers are locked in.
+            Transparent, per-square-foot pricing on the installations we do most. Every project starts with a site walk to confirm scope before any numbers are locked in.
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {constructionServices.map((svc) => (

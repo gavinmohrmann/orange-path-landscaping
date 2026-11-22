@@ -4,10 +4,10 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Orange Path Landscaping | Landscape Design, Hardscapes & Property Care — Orange County, CA',
-  description: 'Orange County\'s landscape design and construction company. 3D design renders, hardscapes, retaining walls, exposed-aggregate concrete, native plants, and property care. Veteran-owned. LIC #1146854. Free consultations.',
+  description: 'Orange County\'s landscape design and construction company. 3D design renders, hardscapes, retaining walls, exposed-aggregate concrete, native plants, and property care. Veteran-owned. LIC #1146854. Free phone consultations.',
   openGraph: {
     title: 'Orange Path Landscaping | Orange County, CA',
-    description: 'Landscape design, hardscapes, retaining walls, concrete, and property care. Veteran-owned. Free consultations.',
+    description: 'Landscape design, hardscapes, retaining walls, concrete, and property care. Veteran-owned. Free phone consultations.',
     url: 'https://orangepathlandscaping.com',
   },
 }

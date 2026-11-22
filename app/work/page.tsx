@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
 import Lightbox from '@/components/Lightbox'
 
 export const metadata: Metadata = {
@@ -270,7 +269,7 @@ export default function WorkPage() {
           <p className="text-white/55 mb-8 leading-relaxed">
             We&apos;d love to learn about your space and share what&apos;s possible.
           </p>
-          <Link href="/contact" className="btn-outline">Get in Touch</Link>
+          <a href="https://calendly.com/gavin-orangepathlandscaping/30min" target="_blank" rel="noopener noreferrer" className="btn-outline">Book a Free Phone Consultation</a>
         </div>
       </section>
     </>

@@ -3,9 +3,9 @@
 import { useState } from 'react'
 import { reportConversion, CONV_FORM } from '@/components/GoogleTag'
 
-// Short lead form used on landing pages (maintenance). Posts to the same
+// Short lead form used on landing pages (maintenance, hardscape). Posts to the same
 // FormSubmit inbox as the contact page and fires the Google Ads conversion.
-export default function QuoteForm({ subject = 'New website lead — Orange Path', service = '', footnote = 'No contracts. Month to month. We respond within one business day.' }: { subject?: string; service?: string; footnote?: string }) {
+export default function QuoteForm({ subject = 'New website lead — Orange Path', service = '', footnote = 'No contracts. Month to month. We respond within one business day.', buttonLabel = 'Request a Quote', thanks = 'Gavin will call or text you within one business day to set up a quick site walk.' }: { subject?: string; service?: string; footnote?: string; buttonLabel?: string; thanks?: string }) {
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState(false)
   const [sending, setSending] = useState(false)
@@ -43,7 +43,7 @@ export default function QuoteForm({ subject = 'New website lead — Orange Path'
       <div className="bg-green-900 text-white p-10 text-center">
         <p className="font-serif text-3xl mb-3">Thank you!</p>
         <p className="text-white/70 leading-relaxed">
-          Gavin will text or call you within one business day to set up a quick walk-through.
+          {thanks}
         </p>
       </div>
     )
@@ -77,7 +77,7 @@ export default function QuoteForm({ subject = 'New website lead — Orange Path'
         <textarea name="message" rows={3} className={`${input} resize-none`} placeholder="Lot size, current gardener, what's bugging you about the yard..." />
       </div>
       <button type="submit" disabled={sending} className="btn-primary w-full text-center disabled:opacity-60">
-        {sending ? 'Sending…' : 'Request a Quote'}
+        {sending ? 'Sending…' : buttonLabel}
       </button>
       {error && (
         <p className="text-red-600 text-sm text-center">
